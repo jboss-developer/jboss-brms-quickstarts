@@ -1,0 +1,46 @@
+package houserules
+
+import org.jboss.quickstarts.brms.sfksession.model.Fire
+import org.jboss.quickstarts.brms.sfksession.model.Sprinkler
+import org.jboss.quickstarts.brms.sfksession.model.House
+import org.jboss.quickstarts.brms.sfksession.model.Room
+import org.jboss.quickstarts.brms.sfksession.model.Alarm
+
+
+rule "When there is a fire turn on the sprinkler"
+when
+    $house : House(  )
+    Fire( $room : room)
+    $sprinkler : Sprinkler( room == $room, on == false  )
+then
+    modify( $sprinkler ) { turnOn(); };
+end
+
+rule "When the fire is gone turn off the sprinkler"
+when
+    $house : House(  )
+    $room : Room( )
+    $sprinkler : Sprinkler( room == $room, on == true )
+    not Fire( room == $room )
+then
+    modify( $sprinkler ) { turnOff(); };
+end
+
+rule "Raise the alarm when we have one or more fires"
+when
+    $house: House(  )
+    exists Fire()
+then
+    insert( new Alarm() );
+    $house.setAlarmOn(true);
+end
+
+rule "Cancel the alarm when all the fires have gone"
+when
+    $house: House(  )
+    not Fire()
+    $alarm : Alarm()
+then
+    delete( $alarm );
+    $house.setAlarmOn(false);
+end
