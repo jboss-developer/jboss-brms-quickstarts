@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
-    Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+    Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
     contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
 
@@ -27,10 +27,8 @@
     <artifactId>brms-quickstart-parent</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
     <packaging>pom</packaging>
-    
     <name>JBoss BRMS Quickstart: jboss-brms-quickstarts</name>
     <description>JBoss BRMS Quickstarts Parent</description>
-    
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
     <licenses>
         <license>
@@ -48,10 +46,10 @@
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
-    
     <modules>
         <module>helloworld-brms</module>
         <module>helloworld-drl</module>
+        <module>stateful-ksession</module>
         <module>store-brms</module>
     </modules>
 </project>
