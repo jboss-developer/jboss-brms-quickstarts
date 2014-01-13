@@ -1,0 +1,26 @@
+package helloworlddrl;
+import org.jboss.quickstarts.brms.helloworlddrl.Sale;
+import org.jboss.quickstarts.brms.helloworlddrl.Customer
+import org.jboss.quickstarts.brms.helloworlddrl.CustomerType
+
+rule "Apply 50% discount to VIP customers"
+when
+    $s: Sale( customer.type == CustomerType.VIP )
+then
+    $s.setDiscount(0.50);
+    $s.setApproved(true);
+end
+
+rule "Apply no discount to Regular customers but approves the Sale"
+when
+    $s: Sale( customer.type == CustomerType.REGULAR )
+then
+    $s.setApproved(true);
+end
+
+rule "Deny sales to BAD customers"
+when
+    $s: Sale( customer.type == CustomerType.BAD )
+then
+    $s.setApproved(false);
+end
