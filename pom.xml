@@ -50,6 +50,7 @@
     </properties>
     
     <modules>
+        <module>helloworld-brms</module>
         <module>helloworld-drl</module>
     </modules>
 </project>
