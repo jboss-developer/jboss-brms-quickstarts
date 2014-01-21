@@ -10,8 +10,7 @@ Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>
 What is it?
 -----------
 
-This project demonstrates how to use BRMS to manage and deploy modules that contains model classes and Rules.
-
+This project demonstrates how to use BRMS to manage and deploy modules that contain model classes and rules.
 
 Three Sales object instance (vipSale, regularSale, badSale) are created on HelloWorldBRMSTest class and they're placed on a StatelessKieSession to verify if the rules described was applied.
 
