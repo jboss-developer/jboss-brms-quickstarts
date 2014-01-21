@@ -14,6 +14,10 @@ This project demonstrates how to use BRMS to manage and deploy modules that cont
 
 Three Sales object instance (vipSale, regularSale, badSale) are created on HelloWorldBRMSTest class and they're placed on a StatelessKieSession to verify if the rules described was applied.
 
+Note that the Sale, Customer and CustomerType was defined on the following dependency: org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0 . This dependency is a BRMS Kmodule that contains the model classes and the rules that were previously built and it's available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
+
+The maven dependency becomes available through the following Maven Repository: `http://localhost:8080/business-central/maven2/` 
+
 This quickstart does not contain a user interface layer. 
 
 System requirements
