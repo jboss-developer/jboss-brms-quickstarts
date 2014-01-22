@@ -51,7 +51,9 @@ Import BRMS repository
 
 3. Choose menu option `Authoring` -> `Administration`
 
-4. 5. Complete the form as follows:
+4. Choose on the sub menu option `Repositories` -> `Clone repository`
+
+5. Complete the form as follows:
 
        Repository Name: jboss-brms-repository
        Organizational Unit: example
