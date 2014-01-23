@@ -96,7 +96,7 @@ Run the Tests
 
         mvn clean test -Penable-test,brms
 
-The BRMS profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` as a project dependency. 
+The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` as a project dependency. 
 
 Now the tests complete successfully.
 
