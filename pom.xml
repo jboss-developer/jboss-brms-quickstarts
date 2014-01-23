@@ -52,5 +52,6 @@
     <modules>
         <module>helloworld-brms</module>
         <module>helloworld-drl</module>
+        <module>store-brms</module>
     </modules>
 </project>
