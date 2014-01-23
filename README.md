@@ -1,6 +1,6 @@
 jboss-brms-quickstarts: BRMS Quickstarts
 ========================================
-Target Product: BRMS
+Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
 Configure BRMS
@@ -19,16 +19,21 @@ Configure BRMS
     * Find `Red Hat JBoss Enterprise Application Platform 6.1.1` in the file list and click `Download`.
     * This downoads the `jboss-eap-6.1.1.zip` file to a directory of your choice.
 
-3. Unzip BRMS and EAP into the same directory.
+3. Unzip EAP into the directory of your choice:
 
-    * Move the downloaded zip archive to the Red Hat JBoss Enterprise Application Platform home directory (EAP_HOME; the jboss-eap-6.1.1 directory).
-    * Unzip the downloaded zip archive: make sure it is merged into the EAP_HOME directory (jboss-eap-6.1.1). It is necessary to overwrite the files that already exist in the EAP_HOME directory with their versions from the downloaded zip archive. When prompted to do so, accept overwriting the original files.
+        For example: unzip jboss-eap-6.1.1.zip -d ROOT_DIR/
+
+   The JBoss EAP installation is now located the `ROOT_DIR/jboss-eap-6.1.1/` directory,
+
+4. Unzip BRMS into the same ROOT_DIR directory. This will merge the BRMS installation with the EAP installation. 
+ 
+        For example: unzip -o jboss-brms-6.0.0.Beta-redhat-5-deployable-eap6.x.zip -d ROOT_DIR/
+
+   The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.1.1/` directory. 
    
-    unzip jboss-eap-6.1.1.zip 
-    unzip -o jboss-brms-6.0.0.Beta-redhat-5-deployable-eap6.x.zip -d EAP_HOME/
-    
+   _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.1.1/` directory.
 
-3. Add an application user
+5. Add an application user
 
         For Linux:   EAP_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
         For Windows: EAP_HOME\bin\add-user.bat  -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
@@ -42,25 +47,28 @@ Start the JBoss Server
         For Linux:   EAP_HOME/bin/standalone.sh
         For Windows: EAP_HOME\bin\standalone.bat
 
-Import BRMS repository
+Import the BRMS Repository
 ----------------------
 
-1. Navigate to http://localhost:8080/business-central in a web browser. 
+1. Navigate to <http://localhost:8080/business-central> in a web browser. 
 
-2. Log in with the user 'quickstartUser' and use 'quickstartPwd1!' as password.
+2. Log in with the following credentials:
+
+        Username: quickstartUser
+        Password: quickstartPwd1!
 
 3. Choose menu option `Authoring` -> `Administration`
 
-4. Choose on the sub menu option `Repositories` -> `Clone repository`
+4. Choose sub-menu option `Repositories` -> `Clone repository`
 
 5. Complete the form as follows:
 
-       Repository Name: jboss-brms-repository
-       Organizational Unit: example
-       Git URL: https://github.com/jboss-developer/jboss-brms-repository.git
-       User Name: 
-       Password:
+        Repository Name:      jboss-brms-repository
+        Organizational Unit:  example
+        Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git
+        User Name:            <leave blank>
+        Password:             <leave blank>
 
-6. Click the `Clone` button to create the repository. You see a message "The repository is cloned successfully".
+6. Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".
 
 
