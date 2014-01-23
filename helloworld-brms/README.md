@@ -12,11 +12,12 @@ What is it?
 
 This project demonstrates how to use BRMS to manage and deploy modules that contain model classes and rules.
 
-Three Sales object instance (vipSale, regularSale, badSale) are created on HelloWorldBRMSTest class and they're placed on a StatelessKieSession to verify if the rules described was applied.
+* The `HelloWorldBRMSTest` class creates 3 Sales object instances: `vipSale`, `regularSale`, and `badSale`.
+* These Sales objects are passed to the `StatelessKieSession` class, which runs the rules against them to verify and apply discounts.
 
-Note that the Sale, Customer and CustomerType was defined on the following dependency: org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0 . This dependency is a BRMS Kmodule that contains the model classes and the rules that were previously built and it's available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
+_Note:_ The Sale, Customer and CustomerType are defined based on the following dependency: org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0. This dependency is a BRMS Kmodule that contains the model classes and the rules that were previously built. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
-The maven dependency becomes available through the following Maven Repository: `http://localhost:8080/business-central/maven2/` 
+The Maven dependency is available at the following Maven Repository: `http://localhost:8080/business-central/maven2/` 
 
 This quickstart does not contain a user interface layer. 
 
@@ -33,7 +34,7 @@ Configure Maven
 
 If you have not yet done so, you must [Configure Maven](../README.md#configure-maven) before testing the quickstart.
 
-Start BRMS
+Start the JBoss Server
 -----------
 
 If you have not yet done so, you must [Configure BRMS](../README.md#configure-brms) before testing the quickstart.
@@ -41,32 +42,43 @@ If you have not yet done so, you must [Configure BRMS](../README.md#configure-br
 1. Open a command line and navigate to the root of the BRMS directory.
 2. The following shows the command line to start the server:
 
-        For Linux:   BRMS_HOME/bin/standalone.sh
-        For Windows: BRMS_HOME\bin\standalone.bat
+        For Linux:   EAP_HOME/bin/standalone.sh
+        For Windows: EAP_HOME\bin\standalone.bat
 
 
-Import BRMS repository
+Import the BRMS Repository
 ----------------------
 
-If you have not yet done so, you must [Import BRMS repository](../README.md#import-brms-repository) before testing the quickstart.
+If you have not yet done so, you must [Import the BRMS repository](../README.md#import-the-brms-repository) before testing the quickstart.
 
 
 Deploy BRMS kmodule
 -------------------
 
-1. Navigate to http://localhost:8080/business-central in a web browser. 
+1. [Start the JBoss S erver](#start-the-jboss-server) as instructed above.
 
-2. Log in with the user 'quickstartsUser' and use 'quickstartPwd1!' as password.
+2. Open a browser and access the following URL: <http://localhost:8080/business-central> 
 
-3. Go to `Authoring` -> `Project Authoring`
+2. Log in with the following credentials:
 
-4. On Project Explorer select: example -> jboss-brms-repository -> helloword-brms-kmodule
+        Username:  quickstartUser
+        Password:  quickstartPwd1!
 
-5. Now, click on `Tools` and `Project Editor`
+3. Choose menu option `Authoring` -> `Project Authoring`
 
-6. On the opened tab on the right side, click on `Build & Deploy`, then click on `Save` button.
+4. Choose the following options under `Project Explorer`:
 
-This will deploy the following artifact org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0 to the BRMS Maven repository. You can check BRMS Maven repository by clicking on `Deployment` ad `Artifact Repository`
+        Organizational Unit:  example
+        Repository Name:      jboss-brms-repository
+        BRMS Kmodule:         helloworld-brms-kmodule
+
+5. Next, click on `Tools` and `Project Editor`
+
+6. In the tab on the right, click on `Build & Deploy`. 
+   * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
+   * You are prompted for a comment. Add a comment and click on `Save` button.
+
+This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
 
 
 Run the Tests 
@@ -77,15 +89,15 @@ Run the Tests
 
         mvn clean test -Penable-test
 
-The tests will fail because the project doesn't have the necessary dependencies
+   The tests fail with compilation errors because the project does not have the necessary dependencies.
 
 4. Now run the following command to run the test goal with the following profiles activated:
 
         mvn clean test -Penable-test,brms
 
-The BRMS profile will enable repository `http://localhost:8080/business-central/maven2/` and add the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` as the project dependency. 
+The BRMS profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` as a project dependency. 
 
-Now the tests will complete.
+Now the tests complete successfully.
 
 Investigate the Console Output
 ----------------------------
@@ -109,7 +121,6 @@ When you run the tests, JUnit will present you test report summary:
     Results :
     
     Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
-
 
 
 Test the Quickstart in JBoss Developer Studio or Eclipse
