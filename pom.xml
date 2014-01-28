@@ -47,9 +47,10 @@
         <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
     <modules>
+        <module>decision-table</module>
         <module>helloworld-brms</module>
         <module>helloworld-drl</module>
         <module>stateful-ksession</module>
-        <module>store-brms</module>
+        <module>store-brms</module>  
     </modules>
 </project>
