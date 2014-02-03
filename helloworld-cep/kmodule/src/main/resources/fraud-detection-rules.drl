@@ -1,0 +1,41 @@
+package houserules
+
+import org.jboss.quickstarts.brms.cep.model.Transaction
+import org.jboss.quickstarts.brms.cep.model.TransactionType
+
+declare Transaction
+    @role ( event )
+end
+
+rule "Transaction suspect if there's 3 in less than 5 seconds between each other"
+    when
+        $transaction: Transaction(  )
+        Number( intValue  > 3) from accumulate (
+            $t: Transaction(  ) over window:time ( 5s ),
+            count($t)
+        )
+    then
+        $transaction.setDenied(true);
+        $transaction.setDeniedCause("Transaction Denied! More than 3 transactions in less than 5 seconds");
+end
+
+rule "Transaction suspect if the value is twice the medium of the last 4 on Credit Card"
+    when
+        $transaction: Transaction( $transactionValue: value  ) from entry-point "Credit Card"
+        $average: Number( (intValue  * 2) < $transactionValue) from accumulate (
+            Transaction( $value: value   ) over window:length ( 4 ) from entry-point "Credit Card",
+            average($value)
+        )
+    then
+        $transaction.setDenied(true);
+        $transaction.setDeniedCause("Transaction Denied! This Credit Card transaction value of USD " + $transaction.getValue() + " is more than twice the medium value ( USD " + $average + ") of the last 4 Credit Card Transactions" );
+end
+
+rule "Withdraw transactions in less than 10 seconds after a credit card transaction is suspect"
+    when
+        $creditCardTransaction: Transaction( ) from entry-point "Credit Card"
+        $withDrawTransaction: Transaction( this after [0s, 10s] $creditCardTransaction, type == TransactionType.WITHDRAW )
+    then
+        $withDrawTransaction.setDenied(true);
+        $withDrawTransaction.setDeniedCause("Transaction Denied! There was a Withdraw transaction in less than 10 seconds after a Credit Card transaction" );
+end
