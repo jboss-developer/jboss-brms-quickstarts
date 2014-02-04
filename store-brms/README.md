@@ -16,9 +16,9 @@ This project demonstrates how to use BRMS to manage and deploy modules that cont
 * The `StoreBRMSTest` class also creates a SalesMan object instance that is used as a global variable inside the `StatelessKieSession`
 * These Sales objects are passed to the `StatelessKieSession` class, which runs the rules against them to verify and apply discounts.
 
-The Person, Sale, Customer and CustomerType classes are defined on the following dependency: org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0. This KModule declares a default KBase named `helloworldKBase`.
+The `Person`, `Sale`, `Customer` and `CustomerType` are defined in a BRMS Kmodule library that is added to the project with the following dependency: `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0`.
 
-The SalesMan class is defined on org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0 and it is a inheritance inheritance of the Person class. . This KModule declares a KBase named `storeKBase` tha includes the `helloworldKBase` and declares a KSession named `storeKSession`. It also includes:
+The `SalesMan` class extendes the `Person` class. It is defined in another Kmodule that is added to the project with this dependency: `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0`. This KModule declares a KBase named `storeKBase` that includes the `helloworldKBase` and declares a KSession named `storeKSession`. It also includes:
 
 * A DRL file named `customerAge` that is a free form rule that contains a rule that denies the sale to a customer that has less than 18 years old.
 * A DRL file named `storeFunctions` that contains a function to calculate the age based on the customer birthdate.
