@@ -26,9 +26,9 @@ The `SalesMan` class extendes the `Person` class. It is defined in another Kmodu
 * A global variable definition called `salesman` that defines a global variable of Salesman type.
 * A guided rule called 'registerSale' that uses the DSL to define a rule that "register" all sales to the specified salesman on the global variable.
 
-These KModules that were previously are available on the the git repository: https://github.com/jboss-developer/jboss-brms-repository.git
+These predefined KModules are available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
-_NOTE:_ The project just includes org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0 as dependency. The helloworld-brms-kmodule is also included because it's a Maven transitive dependency of my-store-brms-kmodule. These dependencies are at the following Maven Repository: `http://localhost:8080/business-central/maven2/` 
+_NOTE:_ This project only includes the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` dependency. The `helloworld-brms-kmodule` is included because it is a Maven transitive dependency of `my-store-brms-kmodule`. These dependencies are located in the following Maven Repository: <http://localhost:8080/business-central/maven2/>
 
 This quickstart does not contain a user interface layer. 
 
@@ -109,19 +109,29 @@ Run the Tests
 -------------
 
 1. Open a command prompt and navigate to the root directory of this quickstart.
-2. Type the following command to run the test goal with the following profile activated:
+2. For these tests, you must add the `brms` dependency on the command line. First try the tests without this dependency. Type the following command to run the test goal with only the `enable-test` profile activated:
 
         mvn clean test -Penable-test
 
-   The tests fail with compilation errors because the project does not have the necessary dependencies.
+   You should see errors simliar to the following:
+   
+        [ERROR] COMPILATION ERROR : 
+        [INFO] -------------------------------------------------------------
+        [ERROR] store-brms/src/test/java/org/jboss/quickstarts/brms/StoreBRMSTest.java:[44,19] error: cannot find symbol
+        [ERROR]  class StoreBRMSTest
+        store-brms/src/test/java/org/jboss/quickstarts/brms/StoreBRMSTest.java:[46,19] error: cannot find symbol
+        [ERROR]  class StoreBRMSTest
+        store-brms/src/test/java/org/jboss/quickstarts/brms/StoreBRMSTest.java:[48,19] error: cannot find symbol
+        
+   The tests fail with compilation errors because the project was not built with the necessary dependencies.
 
-4. Now run the following command to run the test goal with the following profiles activated:
+4. Now run the test goal with both the `enable-test` and the `brms` profiles activated:
 
         mvn clean test -Penable-test,brms
 
-The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` as a project dependency. 
+   The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` as a project dependency. 
 
-Now the tests complete successfully.
+   Now the tests complete successfully.
 
 Investigate the Console Output
 ----------------------------
