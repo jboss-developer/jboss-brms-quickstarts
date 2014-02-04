@@ -12,11 +12,11 @@ What is it?
 
 This project demonstrates how to use BRMS to deploy modules that contain model classes and rules based on Decision Tables.
 
-The `DriverProfile`, `CarProfile` and `PriceQuotation` classes are defined in a BRMS Kmodule that is added to the project with the following dependency: `org.jboss.quickstarts.brms:decision-table:6.1.0`. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>. This module imports the Decision Table rules.
+The `DriverProfile`, `CarProfile` and `PriceQuotation` classes are defined in a BRMS Kmodule that is added to the project with the following dependency: `org.jboss.quickstarts.brms:decision-table:6.1.0`. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>. This module imports the Decision Table rules.
 
-All rules for this BRMS Quickstart are defined in a  `rules.xsl` spreadsheet, located in the root folder of this quickstart, are imported into the BRMS server.
+The rules for this BRMS quickstart are defined in the `rules.xsl` spreadsheet, which is located in the root folder of this quickstart. You import these rules into the BRMS server during the deployment process below.
 
-The `DecisionTableTest` tests each rule defined in the Decision Table.
+The `DecisionTableTest` class tests each rule defined in the Decision Table.
 
 This quickstart does not contain a user interface layer. 
 
@@ -31,7 +31,7 @@ The application this project produces is designed to be run on BRMS 6
 Configure Maven
 ---------------
 
-If you have not yet done so, you must [Configure Maven](../README.md#configure-maven) before testing the quickstart.
+If you have not yet done so, you must [Configure Maven](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/CONFIGURE_MAVEN.md#configure-maven-to-build-and-deploy-the-quickstarts) before testing the quickstart.
 
 Start the JBoss Server
 -----------------------
@@ -54,50 +54,37 @@ If you have not yet done so, you must [Import the BRMS repository](../README.md#
 Deploy BRMS kmodule
 -------------------
 
-1. [Start the JBoss S erver](#start-the-jboss-server) as instructed above.
+1. [Start the JBoss Server](#start-the-jboss-server) as instructed above.
 
 2. Open a browser and access the following URL: <http://localhost:8080/business-central> 
 
-2. Log in with the following credentials:
+3. Log in with the following credentials:
 
         Username:  quickstartUser
         Password:  quickstartPwd1!
 
-3. Choose menu option `Authoring` -> `Project Authoring`
+4. Choose menu option `Authoring` -> `Project Authoring`
 
-4. Choose the following options under `Project Explorer`:
+5. Choose the following options under `Project Explorer`:
 
         Organizational Unit:  example
         Repository Name:      jboss-brms-repository
         BRMS Kmodule:         decision-table-kmodule
 
-5. Next, click on `Tools` and `Project Editor`
+6. Choose menu option `New Item` -> `Decision Table (Spreadsheet)`
 
-6. In the tab on the right, click on `Build & Deploy`. 
+7. On `Create new Decision Table (Spreadsheet)` dialog, enter the following:
+   * For `Resource Name`, type `insurance-rules`. 
+   * Click on `Choose File` button, and select the `rules.xsl` file that is located root directory of this quickstart.
+     _Note:_ The file path will display `C:\fakepath\rules.xls`, but you can ignore that. Click `OK`.
+
+   * It will prompt you with a message: "Uploaded successfully". Click `OK`.
+
+8. Next, click on `Tools` and `Project Editor`
+
+9. In the tab on the right, click on `Build & Deploy`. 
    * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
    * You are prompted for a comment. Add a comment and click on `Save` button.
-   
-7. Choose menu option `New Item` -> `Decision Table (Spreadsheet)`
-
-8. On `Create new Decision Table (Spreadsheet)` dialog:
-
-    * Type as `Resource Name`, type `insurance-rules`. 
-    * Click on `Choose File` button, and select the `rules.xsl` file that is located on this quickstart root dir. Click `OK`.
-    * It will prompt you with a message: "Uploaded successfully". Click `OK`.
-
-
-9. Now, choose the following options under `Project Explorer`:
-
-        Organizational Unit:  example
-        Repository Name:      jboss-brms-repository
-        BRMS Kmodule:         my-store-brms-kmodule
-
-10. Next, click on `Tools` and `Project Editor`
-
-11. In the tab on the right, click on `Build & Deploy`. 
-   * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
-   * You are prompted for a comment. Add a comment and click on `Save` button.
-
    This deploys the `org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
 
 
@@ -105,19 +92,29 @@ Run the Tests
 -------------
 
 1. Open a command prompt and navigate to the root directory of this quickstart.
-2. Type the following command to run the test goal with the following profile activated:
+2. For these tests, you must add the`brms` dependency on the command line. First try the tests without this dependency. Type the following command to run the test goal with only the `enable-test` profile activated:
 
         mvn clean test -Penable-test
 
+   You should see errors similar to the following:
+   
+        [ERROR] COMPILATION ERROR : 
+        [INFO] -------------------------------------------------------------
+        [ERROR] /home/sgilda/GitRepos/jboss-brms-quickstarts/decision-table/src/test/java/org/jboss/quickstarts/brms/DecisionTableTest.java:[53,8] error: cannot find symbol
+        [ERROR]  class DecisionTableTest
+        /home/sgilda/GitRepos/jboss-brms-quickstarts/decision-table/src/test/java/org/jboss/quickstarts/brms/DecisionTableTest.java:[53,44] error: cannot find symbol
+        [ERROR]  class DecisionTableTest
+        /home/sgilda/GitRepos/jboss-brms-quickstarts/decision-table/src/test/java/org/jboss/quickstarts/brms/DecisionTableTest.java:[59,8] error: cannot find symbol
+
    The tests fail with compilation errors because the project does not have the necessary dependencies.
 
-4. Now run the following command to run the test goal with the following profiles activated:
+4. Now run the test goal with the both the `enable-test` and `brms` profiles activated:
 
         mvn clean test -Penable-test,brms
 
-The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` as a project dependency. 
+  The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` as a project dependency. 
 
-Now the tests complete successfully.
+  Now the tests complete successfully.
 
 Investigate the Console Output
 ----------------------------
