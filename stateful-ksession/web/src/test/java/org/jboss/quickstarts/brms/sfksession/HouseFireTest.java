@@ -20,6 +20,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
@@ -57,6 +59,7 @@ public class HouseFireTest {
 
     @Deployment
     public static Archive<?> getDeployment() {
+        Logger.getLogger("org.jboss.shrinkwrap.resolver").setLevel(Level.SEVERE);
         File pom = new File("pom.xml");
         File[] libs = Maven.resolver()
             .loadPomFromFile(pom)
