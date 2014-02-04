@@ -12,11 +12,11 @@ What is it?
 
 This project demonstrates how to use BRMS to deploy modules that contain model classes and rules based on Decision Tables.
 
-The `DriverProfile`, `CarProfile` and `PriceQuotation` classes are defined on the following dependency: org.jboss.quickstarts.brms:decision-table:6.1.0. This dependency is a BRMS Kmodule that contains the model classes were previously built. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>. This module will be used to import the Decision Table rules.
+The `DriverProfile`, `CarProfile` and `PriceQuotation` classes are defined in a BRMS Kmodule that is added to the project with the following dependency: `org.jboss.quickstarts.brms:decision-table:6.1.0`. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>. This module imports the Decision Table rules.
 
-All rules on this BRMS Quickstart are described on a  `rules.xsl` spreeadsheet that is located on this Quickstart root dir that should be imported to BRMS server.
+All rules for this BRMS Quickstart are defined in a  `rules.xsl` spreadsheet, located in the root folder of this quickstart, are imported into the BRMS server.
 
-The `DecisionTableTest` test eacho rule defined on the Decision Table.
+The `DecisionTableTest` tests each rule defined in the Decision Table.
 
 This quickstart does not contain a user interface layer. 
 
