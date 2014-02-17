@@ -38,6 +38,7 @@ import org.jboss.shrinkwrap.resolver.api.maven.Maven;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.rule.FactHandle;
 
 /**
  * @author rafaelbenevides
@@ -77,22 +78,34 @@ public class HouseFireTest {
 
     @Test
     public void assertAlarmWorkingAndSprinklerWorkingOnFire() {
+        System.out.println("** Testing if Sprinkler and Alarm is working **");
         Room room = new Room("testRoom");
         Sprinkler sprinkler = new Sprinkler(room);
         kieSession.insert(house);
         kieSession.insert(sprinkler);
         kieSession.insert(room);
         // Put fire in the room
-        kieSession.insert(new Fire(room));
+        FactHandle fireHandle = kieSession.insert(new Fire(room));
         kieSession.fireAllRules();
         // Sprinkler should be On
         assertTrue(sprinkler.isOn());
         // Alarm should be On
         assertTrue(house.isAlarmOn());
+        
+        //Remove the fire
+        kieSession.delete(fireHandle);
+        // There's no fire on the House
+        kieSession.fireAllRules();
+        // Sprinkler should be Off
+        assertFalse(sprinkler.isOn());
+        // Alarm should be Off
+        assertFalse(house.isAlarmOn());
+        
     }
 
     @Test
     public void assertSprinklerOffWihoutFire() {
+        System.out.println("** Testing if Sprinkler and Alarm is off without fire **");
         Room room = new Room("testRoom");
         Sprinkler sprinkler = new Sprinkler(room);
         kieSession.insert(house);

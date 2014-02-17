@@ -5,7 +5,6 @@ Level: Intermediate
 Technologies: CDI, JSF, Drools  
 Summary: This Quickstart shows how to use Stateful Kie Session  
 Target Product: BRMS  
-Product Versions: EAP 6.1, EAP 6.2  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts>  
 
 What is it?
@@ -24,9 +23,9 @@ This Quickstarts contains two modules:
 System requirements
 -------------------
 
-The application this project produces is designed to be run on Red Hat JBoss Enterprise Application Platform 6.1 or later.
-
 All you need to build this project is Java 6.0 (Java SDK 1.6) or later, Maven 3.0 or later.
+
+The application this project produces is designed to be run on BRMS 6.
 
 
 Configure Maven
@@ -42,8 +41,8 @@ Start the JBoss Server
 1. Open a command prompt and navigate to the root of the JBoss server directory.
 2. The following shows the command line to start the server:
 
-        For Linux:   JBOSS_HOME/bin/standalone.sh
-        For Windows: JBOSS_HOME\bin\standalone.bat
+        For Linux:   EAP_HOME/bin/standalone.sh
+        For Windows: EAP_HOME\bin\standalone.bat
 
 
 Build and Deploy the Quickstart

@@ -107,7 +107,7 @@ Run the Tests
 
    The tests fail with compilation errors because the project does not have the necessary dependencies.
 
-4. Now run the test goal with the both the `enable-test` and `brms` profiles activated:
+3. Now run the test goal with the both the `enable-test` and `brms` profiles activated:
 
         mvn clean test -Penable-test,brms
 
@@ -124,15 +124,44 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.DecisionTableTest
-    Jan 28, 2014 10:51:20 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
+    Fev 17, 2014 10:31:46 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
     INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 28, 2014 10:51:21 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
+    Fev 17, 2014 10:31:46 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
     INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar]
-    Jan 28, 2014 10:51:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 28, 2014 10:51:21 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar]
-    Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.219 sec
+    ** Testing senior from NY or NC **
+    Standard male price (with incidents) applied
+    Promotional price for NY/NC seniors applied
+    Resulting price: 200
+    ** Testing Standard Junior Rule **
+    Standard teenager price applied
+    Resulting price: 1800
+    ** Testing standard price for Males with more than 21 years old with risk (previous incidents) **
+    Standard male price (with incidents) applied
+    Resulting price: 1100
+    ** Testing Standard Junior Rule with Risk 1 (no garage, no alarm) **
+    Standard teenager price applied
+    Junior risk 1 price applied
+    Resulting price: 2000
+    ** Testing Standard Junior Rule with Risk 2 (no garage, no alarm - previous incidents) **
+    Standard teenager price applied
+    Junior risk 1 price applied
+    Junior risk 2 price applied
+    Resulting price: 2500
+    ** Testing senior from NY or NC - special price for no incidents **
+    Standard male price applied
+    Promotional price for NY/NC seniors applied
+    Promotional++ price for NY/NC seniors (without incidents) applied
+    Resulting price: 100
+    ** Testing Young Lady 1 (promotional value) **
+    Young lady price applied
+    Resulting price: 1500
+    ** Testing Female with more than 21 years old **
+    Female price applied
+    Resulting price: 900
+    ** Testing standard price for Males with more than 21 years old **
+    Standard male price applied
+    Resulting price: 1000
+    Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.973 sec
     
     Results :
     

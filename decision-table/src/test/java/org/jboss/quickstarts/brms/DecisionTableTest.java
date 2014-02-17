@@ -56,6 +56,7 @@ public class DecisionTableTest {
 
     @Test
     public void testRuleStandardJunior() {
+        System.out.println("** Testing Standard Junior Rule **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(true);
@@ -68,11 +69,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(1800, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardJuniorRisk1() {
+        System.out.println("** Testing Standard Junior Rule with Risk 1 (no garage, no alarm) **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -85,11 +88,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(2000, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardJuniorRisk2() {
+        System.out.println("** Testing Standard Junior Rule with Risk 2 (no garage, no alarm - previous incidents) **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -102,11 +107,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(2500, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardYoungLady1() {
+        System.out.println("** Testing Young Lady 1 (promotional value) **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -119,11 +126,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(1500, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardM1() {
+        System.out.println("** Testing standard price for Males with more than 21 years old **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -136,11 +145,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(1000, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardM1Risk() {
+        System.out.println("** Testing standard price for Males with more than 21 years old with risk (previous incidents) **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -153,11 +164,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(1100, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleStandardF() {
+        System.out.println("** Testing Female with more than 21 years old **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -170,11 +183,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(900, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleSeniorStatePromotion() {
+        System.out.println("** Testing senior from NY or NC **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -188,11 +203,13 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(200, priceQuotation.getPrice().intValue());
     }
 
     @Test
     public void testRuleSeniorStatePromotionPlus() {
+        System.out.println("** Testing senior from NY or NC - special price for no incidents **");
         CarProfile carProfile = new CarProfile();
         carProfile.setHasAlarm(false);
         carProfile.setHasGarage(false);
@@ -206,6 +223,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
+        System.out.println("Resulting price: "  + priceQuotation.getPrice());
         assertEquals(100, priceQuotation.getPrice().intValue());
     }
 }

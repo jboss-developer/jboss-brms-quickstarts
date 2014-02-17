@@ -57,7 +57,7 @@ If you have not yet done so, you must [Import the BRMS repository](../README.md#
 Deploy BRMS kmodule
 -------------------
 
-1. [Start the JBoss S erver](#start-the-jboss-server) as instructed above.
+1. [Start the JBoss Server](#start-the-jboss-server) as instructed above.
 
 2. Open a browser and access the following URL: <http://localhost:8080/business-central> 
 
@@ -110,15 +110,18 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.HelloWorldBRMSTest
-    Jan 16, 2014 5:41:44 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
+    Fev 17, 2014 10:39:06 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
     INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 16, 2014 5:41:45 PM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
+    Fev 17, 2014 10:39:06 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
     INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
-    Jan 16, 2014 5:41:45 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 16, 2014 5:41:45 PM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
-    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.487 sec
+    ** Testing VIP customer **
+    VIP discount applied
+    Sale approved
+    ** Testing regular customer **
+    Sale approved
+    ** Testing BAD customer **
+    Bad customer. Sale denied
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.407 sec
     
     Results :
     

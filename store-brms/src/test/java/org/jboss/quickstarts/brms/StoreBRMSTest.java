@@ -58,7 +58,7 @@ public class StoreBRMSTest {
         Date oldDate = new GregorianCalendar(1977, 06, 10).getTime();
         // A birthDate for a non legal age customer
         Date youngDate = new GregorianCalendar(2010, 06, 10).getTime();
-        
+
         KieServices kieServices = KieServices.Factory.get();
         KieContainer kContainer = kieServices.getKieClasspathContainer();
         // Use a specified KSession from org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0
@@ -104,6 +104,7 @@ public class StoreBRMSTest {
 
     @Test
     public void testGoodCustomer() {
+        System.out.println("** Testing VIP customer **");
         kSession.execute(vipSale);
         // Sale approved
         assertTrue(vipSale.getApproved().booleanValue());
@@ -113,6 +114,7 @@ public class StoreBRMSTest {
 
     @Test
     public void testRegularCustomer() {
+        System.out.println("** Testing regular customer **");
         kSession.execute(regularSale);
         // Sale approved
         assertTrue(regularSale.getApproved().booleanValue());
@@ -122,6 +124,7 @@ public class StoreBRMSTest {
 
     @Test
     public void testBadCustomer() {
+        System.out.println("** Testing BAD customer **");
         kSession.execute(badSale);
         // Sale denied
         assertFalse(badSale.getApproved().booleanValue());
@@ -129,6 +132,7 @@ public class StoreBRMSTest {
 
     @Test
     public void testYoungCustomer() {
+        System.out.println("** Testing Young customer **");
         kSession.execute(youngSale);
         // Sale denied for young customer
         assertFalse(youngSale.getApproved());
@@ -136,7 +140,8 @@ public class StoreBRMSTest {
 
     @AfterClass
     public static void testSalesfromSalesMan() {
+        System.out.println("** Testing if all sales were registered to salesman **");
         // Assert that all sales (bad,vip,regular,young) was registered after all
-        assertEquals(salesman.getAllSales().size(), 4);
+        assertEquals(4, salesman.getAllSales().size());
     }
 }

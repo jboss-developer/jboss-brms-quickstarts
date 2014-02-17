@@ -75,6 +75,7 @@ public class HelloWorldBRMSTest {
 
     @Test
     public void testGoodCustomer() {
+        System.out.println("** Testing VIP customer **");
         kSession.execute(vipSale);
         // Sale approved
         assertTrue(vipSale.getApproved().booleanValue());
@@ -84,6 +85,7 @@ public class HelloWorldBRMSTest {
 
     @Test
     public void testRegularCustomer() {
+        System.out.println("** Testing regular customer **");
         kSession.execute(regularSale);
         // Sale approved
         assertTrue(regularSale.getApproved().booleanValue());
@@ -93,6 +95,7 @@ public class HelloWorldBRMSTest {
 
     @Test
     public void testBadCustomer() {
+        System.out.println("** Testing BAD customer **");
         kSession.execute(badSale);
         // Sale denied
         assertFalse(badSale.getApproved().booleanValue());

@@ -47,25 +47,27 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.helloworlddrl.HelloWorldDRLTest
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
+    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
     INFO: Found kmodule: file:/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes/META-INF/kmodule.xml
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
+    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
     WARNING: Unable to load pom.properties tried recursing down from/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes
     null
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
+    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
     INFO: Recursed up folders,  found and used pom.xml /Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/pom.xml
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
+    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
     INFO: KieModule was added:FileKieModule[ ReleaseId=org.jboss.quickstarts.brms:brms-helloworld-drl:6.1.0-build-SNAPSHOTfile=/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes]
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: file:/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes/META-INF/kmodule.xml
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
-    WARNING: Unable to load pom.properties tried recursing down from/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes
-    null
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
-    INFO: Recursed up folders,  found and used pom.xml /Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/pom.xml
-    Jan 08, 2014 5:42:22 PM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:FileKieModule[ ReleaseId=org.jboss.quickstarts.brms:brms-helloworld-drl:6.1.0-build-SNAPSHOTfile=/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes]
-    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.975 secc
+    ** Testing VIP customer **
+    VIP discount applied
+    Sale approved
+    ** Testing regular customer **
+    Sale approved
+    ** Testing BAD customer **
+    BAD customer. Sale denied
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.857 sec
+    
+    Results :
+    
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 
 Test the Quickstart in JBoss Developer Studio or Eclipse
 -------------------------------------

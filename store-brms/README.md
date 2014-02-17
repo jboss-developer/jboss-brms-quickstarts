@@ -125,7 +125,7 @@ Run the Tests
         
    The tests fail with compilation errors because the project was not built with the necessary dependencies.
 
-4. Now run the test goal with both the `enable-test` and the `brms` profiles activated:
+3. Now run the test goal with both the `enable-test` and the `brms` profiles activated:
 
         mvn clean test -Penable-test,brms
 
@@ -142,23 +142,30 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.StoreBRMSTest
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
+    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
     INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
+    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
     INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar]
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
+    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
     INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
+    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
     INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar]
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Jan 23, 2014 10:29:54 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
-    Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.791 sec
+    ** Testing VIP customer **
+    VIP discount applied
+    Sale approved
+    sale registered to salesmen
+    ** Testing regular customer **
+    Sale approved
+    sale registered to salesmen
+    ** Testing Young customer **
+    Sale approved
+    sale registered to salesmen
+    Sale denied for customer with less than 18 years old
+    ** Testing BAD customer **
+    Bad customer. Sale denied
+    sale registered to salesmen
+    ** Testing if all sales were registered to salesman **
+    Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.734 sec
     
     Results :
     

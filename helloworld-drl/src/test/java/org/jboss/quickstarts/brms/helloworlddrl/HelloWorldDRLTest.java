@@ -52,21 +52,29 @@ public class HelloWorldDRLTest {
 
     @Test
     public void testGoodCustomer() {
+        System.out.println("** Testing VIP customer **");
         kSession.execute(vipSale);
+        // Sale approved
         assertTrue(vipSale.isApproved());
+        // Discount of 0.5
         assertEquals(vipSale.getDiscount(), 0.50F, 0.0);
     }
 
     @Test
     public void testRegularCustomer() {
+        System.out.println("** Testing regular customer **");
         kSession.execute(regularSale);
+        // Sale approved
         assertTrue(regularSale.isApproved());
+        // No Discount
         assertEquals(regularSale.getDiscount(), 0.0, 0.0);
     }
 
     @Test
     public void testBadCustomer() {
+        System.out.println("** Testing BAD customer **");
         kSession.execute(badSale);
+        // Sale denied
         assertFalse(badSale.isApproved());
     }
 

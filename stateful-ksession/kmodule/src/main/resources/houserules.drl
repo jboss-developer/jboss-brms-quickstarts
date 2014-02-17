@@ -14,6 +14,7 @@ when
     $sprinkler : Sprinkler( room == $room, on == false  )
 then
     modify( $sprinkler ) { turnOn(); };
+    System.out.println("Sprinkler turned on");
 end
 
 rule "When the fire is gone turn off the sprinkler"
@@ -24,6 +25,7 @@ when
     not Fire( room == $room )
 then
     modify( $sprinkler ) { turnOff(); };
+    System.out.println("Sprinkler turned off");
 end
 
 rule "Raise the alarm when we have one or more fires"
@@ -33,6 +35,7 @@ when
 then
     insert( new Alarm() );
     $house.setAlarmOn(true);
+    System.out.println("Alarm fired");
 end
 
 rule "Cancel the alarm when all the fires have gone"
@@ -43,4 +46,5 @@ when
 then
     delete( $alarm );
     $house.setAlarmOn(false);
+    System.out.println("Alarm disabed");
 end

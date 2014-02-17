@@ -6,11 +6,11 @@ Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>
 Configure BRMS
 --------------
 
-1. Download BRMS 6.0 0 Beta from the Customer Portal
+1. Download BRMS 6.0 0 from the Customer Portal
     * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
     * Select `BRMS Platform` from the Product list.
-    * Find `Red Hat JBoss BRMS 6.0.0 Beta Deployable for EAP 6.1.1` in the file list and click `Download`.
-    * This downoads the `jboss-brms-6.0.0.Beta-redhat-5-deployable-eap6.x.zip` file to a directory of your choice.
+    * Find `Red Hat JBoss BRMS 6.0.0 Deployable for EAP 6.1.1` in the file list and click `Download`.
+    * This downoads the `jboss-brms-6.0.0.GA-redhat-2-deployable-eap6.x.zip` file to a directory of your choice.
  
 2. Download JBoss EAP 6.1.1 from the Customer Portal
     * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
@@ -27,7 +27,7 @@ Configure BRMS
 
 4. Unzip BRMS into the same ROOT_DIR directory. This will merge the BRMS installation with the EAP installation. 
  
-        For example: unzip -o jboss-brms-6.0.0.Beta-redhat-5-deployable-eap6.x.zip -d ROOT_DIR/
+        For example: unzip -o jboss-brms-6.0.0.GA-redhat-2-deployable-eap6.x.zip -d ROOT_DIR/
 
    The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.1.1/` directory. 
    
