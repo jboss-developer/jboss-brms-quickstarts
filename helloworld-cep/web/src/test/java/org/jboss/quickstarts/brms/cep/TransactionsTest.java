@@ -74,6 +74,7 @@ public class TransactionsTest {
 
     @Test
     public void test3TransactionsIn5Seconds() {
+        System.out.println("** Placing more than 3 transactions in less than 5 seconds **");
         Transaction t1 = new Transaction();
         Transaction t2 = new Transaction();
         Transaction t3 = new Transaction();
@@ -85,10 +86,12 @@ public class TransactionsTest {
         kieSession.fireAllRules();
         // t4 should be denied
         Assert.assertTrue(t4.isDenied());
+        System.out.println("* Transaction denied: " + t4.isDenied());
     }
 
     @Test
     public void test3TransactionsIn10Seconds() {
+        System.out.println("** Placing more than 3 transaction is more than 5 seconds **");
         Transaction t1 = new Transaction();
         Transaction t2 = new Transaction();
         Transaction t3 = new Transaction();
@@ -105,10 +108,12 @@ public class TransactionsTest {
         kieSession.fireAllRules();
         // t4 is not denied because it was inserted after 10 seconds
         Assert.assertFalse(t4.isDenied());
+        System.out.println("* Transaction denied: " + t4.isDenied());
     }
 
     @Test
     public void test4CreditCardTransactions() {
+        System.out.println("** Placing a Credit Card where its value is twice the medium of last 4 **");
         Transaction t1 = new Transaction(new BigInteger("10"), TransactionType.CREDIT_CARD);
         Transaction t2 = new Transaction(new BigInteger("10"), TransactionType.CREDIT_CARD);
         Transaction t3 = new Transaction(new BigInteger("10"), TransactionType.CREDIT_CARD);
@@ -122,10 +127,12 @@ public class TransactionsTest {
         kieSession.fireAllRules();
         // t5 is denied because it is twice the medium of last 4 transactions (t1, t2, t3, t4)
         Assert.assertTrue(t5.isDenied());
+        System.out.println("* Transaction denied: " + t5.isDenied());
     }
 
     @Test
     public void testWithdrawIn10SecondAfterCreditCard() {
+        System.out.println("** Placing a Withdraw after a Credit Card transaction in less than 10 seconds **");
         Transaction t1 = new Transaction(new BigInteger("10"), TransactionType.CREDIT_CARD);
         Transaction t2 = new Transaction(new BigInteger("10"), TransactionType.WITHDRAW);
         EntryPoint entryPoint = kieSession.getEntryPoint("Credit Card");
@@ -133,10 +140,12 @@ public class TransactionsTest {
         kieSession.insert(t2);
         kieSession.fireAllRules();
         Assert.assertTrue(t2.isDenied());
+        System.out.println("* Transaction denied: " + t2.isDenied());
     }
 
     @Test
     public void testWithdrawIn20SecondAfterCreditCard() {
+        System.out.println("** Placing a Withdraw after a Credit Card transaction in more than 10 seconds **");
         Transaction t1 = new Transaction(new BigInteger("10"), TransactionType.CREDIT_CARD);
         Transaction t2 = new Transaction(new BigInteger("10"), TransactionType.WITHDRAW);
         EntryPoint entryPoint = kieSession.getEntryPoint("Credit Card");
@@ -148,5 +157,6 @@ public class TransactionsTest {
         kieSession.insert(t2);
         kieSession.fireAllRules();
         Assert.assertFalse(t2.isDenied());
+        System.out.println("* Transaction denied: " + t2.isDenied());
     }
 }

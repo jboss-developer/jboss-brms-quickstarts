@@ -51,6 +51,7 @@
         <module>helloworld-brms</module>
         <module>helloworld-drl</module>
         <module>stateful-ksession</module>
-        <module>store-brms</module>  
+        <module>store-brms</module>
+        <module>helloworld-cep</module>
     </modules>
 </project>
