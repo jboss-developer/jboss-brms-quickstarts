@@ -7,15 +7,15 @@ Summary: These quickstarts demonstrate how to use BRMS and BPM to manage and dep
 
 *Red Hat JBoss BRMS* is an open source decision management platform that combines Business Rules Management and Complex Event Processing. It automates business decisions and makes that logic available to the entire business. 
 
-*Red Hat JBoss BPM* Suite is an open source business process management suite that combines Business Process Management and Business Rules Management and enables business and IT users to create, manage, validate, and deploy Business Processes and Rules.
+*Red Hat JBoss BPM Suite* is an open source business process management suite that combines Business Process Management and Business Rules Management and enables business and IT users to create, manage, validate, and deploy Business Processes and Rules.
 
-Both BRMS and BPM use a centralized repository where all resources are stored. This ensures consistency, transparency, and the ability to audit across the business. Business users can modify business logic without requiring assistance from IT personnel.
+Both BRMS and BPM Suite use a centralized repository where all resources are stored. This ensures consistency, transparency, and the ability to audit across the business. Business users can modify business logic without requiring assistance from IT personnel.
 
 The root folder of each individual quickstart contains a README file with specific details on how to configure the environment and how build and run the example. In some most cases you need to configure either BRMS or BPM and import the BRMS repository.
 
 * [Configure BRMS](#configure-brms): Download and configure Red Hat JBoss BRMS.
 
-* [Configure BPM](#configure-bpm): Download and configure Red Hat JBoss BPM.
+* [Configure BPM](#configure-bpm-suite): Download and configure Red Hat JBoss BPM.
 
 * [Import the BRMS Repository](#import-the-brms-repository): Import the BRMS repository containing the rules and resources used by the quickstarts.
 
@@ -57,10 +57,10 @@ Configure BRMS
         For Linux:   EAP_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
         For Windows: EAP_HOME\bin\add-user.bat  -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
     
-Configure BPM
--------------
+Configure BPM Suite
+-------------------
 
-1. Download BPM 6.0 0 from the Customer Portal
+1. Download BPM Suite 6.0 0 from the Customer Portal
     * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
     * Select `BPM Suite` from the Product list.
     * Find `Red Hat JBoss BPM Suite 6.0.0 Deployable for EAP 6.1.1` in the file list and click `Download`.

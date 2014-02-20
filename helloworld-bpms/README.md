@@ -38,7 +38,7 @@ If you have not yet done so, you must [Configure Maven](https://github.com/jboss
 Start the JBoss Server
 -----------
 
-If you have not yet done so, you must [Configure BPMS](../README.md#configure-bpms) before testing the quickstart.
+If you have not yet done so, you must [Configure BPM Suite](../README.md#configure-bpm-suite) before testing the quickstart.
 
 1. Open a command line and navigate to the root of the BRMS directory.
 2. The following shows the command line to start the server:
