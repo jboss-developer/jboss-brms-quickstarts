@@ -53,5 +53,6 @@
         <module>stateful-ksession</module>
         <module>store-brms</module>
         <module>helloworld-cep</module>
+        <module>helloworld-bpms</module>
     </modules>
 </project>
