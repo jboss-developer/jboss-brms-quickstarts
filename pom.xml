@@ -48,11 +48,11 @@
     </properties>
     <modules>
         <module>decision-table</module>
+        <module>helloworld-bpmsuite</module>
         <module>helloworld-brms</module>
+        <module>helloworld-cep</module>
         <module>helloworld-drl</module>
         <module>stateful-ksession</module>
         <module>store-brms</module>
-        <module>helloworld-cep</module>
-        <module>helloworld-bpms</module>
     </modules>
 </project>

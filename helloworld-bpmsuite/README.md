@@ -1,18 +1,18 @@
-helloworld-bpms: A Basic BPMS example
+helloworld-bpmsuite: A Basic BPM Suite example
 ======================================
 Author: Rafael Benevides  
 Level: Beginner  
 Technologies: Drools, BRMS 
-Summary: Shows how to run a Process that was defined on a BPMS server  
-Target Product: BPMS  
+Summary: Shows how to run a Process that was defined on a JBoss BPM Suite server  
+Target Product: BPM-SUITE  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
 What is it?
 -----------
 
-This project demonstrates how to use BPMS to manage and deploy business process.
+This project demonstrates how to use BPM Suite to manage and deploy business process.
 
-* The `HelloworldProcessTest` class starts a process that was defined in BPMS
+* The `HelloworldProcessTest` class starts a process that was defined in BPM Suite
 
 _Note:_ The bpms-project.helloworld process was defined on the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
@@ -26,7 +26,7 @@ System requirements
 
 All you need to build this project is Java 6.0 (Java SDK 1.6) or later, Maven 3.0 or later.
 
-The application this project produces is designed to be run on BPMS 6
+The application this project produces is designed to be run on BPM Suite 6
 
  
 Configure Maven
@@ -53,7 +53,7 @@ Import the BRMS Repository
 If you have not yet done so, you must [Import the BRMS repository](../README.md#import-the-brms-repository) before testing the quickstart.
 
 
-Deploy BPMS process project
+Deploy the BPM Suite Process Project
 ----------------------------
 
 1. [Start the JBoss Server](#start-the-jboss-server) as instructed above.

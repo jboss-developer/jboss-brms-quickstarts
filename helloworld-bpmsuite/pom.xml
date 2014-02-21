@@ -19,9 +19,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
-    <artifactId>brms-helloworkd-bpms</artifactId>
+    <artifactId>brms-helloworld-bpmsuite</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
-    <name>JBoss BRMS Quickstart: helloworkd-bpms</name>
+    <name>JBoss BRMS Quickstart: helloworld-bpmsuite</name>
 
     <licenses>
         <license>
@@ -131,10 +131,10 @@
             </properties>
         </profile>
 
-        <!-- The bpms profile enable BPMS repository and the needed kmodule dependency -->
+        <!-- The bpms profile enables the BPM Suite repository and the needed kmodule dependency -->
         <profile>
             <id>bpms</id>
-            <!-- Enable BPMS Repository -->
+            <!-- Enable BPM Suite Repository -->
             <repositories>
                 <repository>
                     <id>bpms-m2-repo</id>
