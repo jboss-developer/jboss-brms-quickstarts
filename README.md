@@ -17,9 +17,10 @@ The root folder of each individual quickstart contains a README file with specif
 
 * [Configure BPM](#configure-bpm-suite): Download and configure Red Hat JBoss BPM.
 
+* [Start the JBoss EAP Server](#start-the-jboss-eap-server): Start the JBoss EAP server.
+
 * [Import the BRMS Repository](#import-the-brms-repository): Import the BRMS repository containing the rules and resources used by the quickstarts.
 
-* [Start the JBoss EAP Server](#start-the-jboss-eap-server): Start the JBoss EAP server.
 
 
 Configure BRMS
@@ -93,30 +94,6 @@ Configure BPM Suite
          For Windows: EAP_HOME\bin\add-user.bat  -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
 
 
-Import the BRMS Repository
---------------------------
-
-1. Navigate to <http://localhost:8080/business-central> in a web browser. 
-
-2. Log in with the following credentials:
-
-         Username: quickstartUser
-         Password: quickstartPwd1!
-
-3. Choose menu option `Authoring` -> `Administration`
-
-4. Choose sub-menu option `Repositories` -> `Clone repository`
-
-5. Complete the form as follows:
-
-         Repository Name:      jboss-brms-repository
-         Organizational Unit:  example
-         Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git
-         User Name:            <leave blank>
-         Password:             <leave blank>
-
-6. Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".
-
 Start the JBoss EAP Server
 -------------------------
 
@@ -125,4 +102,31 @@ Start the JBoss EAP Server
 
         For Linux:   EAP_HOME/bin/standalone.sh
         For Windows: EAP_HOME\bin\standalone.bat
+
+Import the BRMS Repository
+--------------------------
+
+1. Make sure you have started the JBoss EAP Server as decribed above.
+ 
+2. Navigate to <http://localhost:8080/business-central> in a web browser. 
+
+3. Log in with the following credentials:
+
+         Username: quickstartUser
+         Password: quickstartPwd1!
+
+4. Choose menu option `Authoring` -> `Administration`
+
+5. Choose sub-menu option `Repositories` -> `Clone repository`
+
+6. Complete the form as follows:
+
+         Repository Name:      jboss-brms-repository
+         Organizational Unit:  example
+         Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git
+         User Name:            <leave blank>
+         Password:             <leave blank>
+
+7. Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".
+
 
