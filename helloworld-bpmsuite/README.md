@@ -1,5 +1,5 @@
 helloworld-bpmsuite: A Basic BPM Suite example
-======================================
+==============================================
 Author: Rafael Benevides  
 Level: Beginner  
 Technologies: Drools, BRMS 
@@ -10,14 +10,14 @@ Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>
 What is it?
 -----------
 
-This project demonstrates how to use BPM Suite to manage and deploy business process.
+This project demonstrates how to use BPM Suite to manage and deploy business processes.
 
 * The `HelloworldProcessTest` class starts a process that was defined in BPM Suite
 
-_Note:_ The bpms-project.helloworld process was defined on the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available on the the git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
+_Note_: The bpms-project.helloworld process is defined in the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
 
-The Maven dependency is available at the following Maven Repository: `http://localhost:8080/business-central/maven2/` 
+The Maven dependency is available in the following Maven Repository: <http://localhost:8080/business-central/maven2/>
 
 This quickstart does not contain a user interface layer. 
 
@@ -79,7 +79,7 @@ Deploy the BPM Suite Process Project
    * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
    * You are prompted for a comment. Add a comment and click on `Save` button.
 
-This deploys the `org.jboss.quickstarts.brms:bpms_project:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
+This deploys the `org.jboss.quickstarts.brms:bpms_project:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deploy` --> `Deployments`.
 
 
 Run the Tests 
@@ -90,9 +90,9 @@ Run the Tests
 
         mvn clean test -Penable-test,bpms
 
-The `bpms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:bpms_project:6.1.0` as a project dependency. 
+The `bpms` profile enables the <http://localhost:8080/business-central/maven2/> repository and adds the `org.jboss.quickstarts.brms:bpms_project:6.1.0` as a project dependency. 
 
-Now the tests complete successfully.
+The tests should complete successfully.
 
 Investigate the Console Output
 ----------------------------
@@ -103,11 +103,14 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.HelloworldProcessTest
-    Fev 20, 2014 10:12:06 AM org.jbpm.test.JbpmJUnitBaseTestCase <init>
+    Fev 28, 2014 12:08:39 PM org.jbpm.test.JbpmJUnitBaseTestCase <init>
     INFO: Configuring entire test case to have data source enabled false and session persistence enabled false with persistence unit name org.jbpm.persistence.jpa
+    ================================
+    = Starting Process Helloworld. =
+    ================================
     Hello World!
     Hello World from rule!
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.027 sec
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.302 sec
     
     Results :
     
