@@ -24,7 +24,7 @@
         <relativePath/>
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
-    <artifactId>brms-quickstart-parent</artifactId>
+    <artifactId>brms-quickstarts-parent</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS Quickstart: jboss-brms-quickstarts</name>
@@ -54,5 +54,6 @@
         <module>helloworld-drl</module>
         <module>stateful-ksession</module>
         <module>store-brms</module>
+        <module>tasks-bpmsuite</module>
     </modules>
 </project>

@@ -34,7 +34,7 @@ import org.kie.internal.runtime.manager.context.ProcessInstanceIdContext;
  * 
  */
 public class HelloworldProcessTest extends JbpmJUnitBaseTestCase {
-    
+
     private static RuntimeEngine runtime;
 
     @Before
@@ -57,6 +57,11 @@ public class HelloworldProcessTest extends JbpmJUnitBaseTestCase {
 
         KieSession kSession = runtime.getKieSession();
 
+        // Fire it up!
+        System.out.println("================================");
+        System.out.println("= Starting Process Helloworld. =");
+        System.out.println("================================");
+
         // start the process
         ProcessInstance processInstance = kSession.startProcess("bpms-project.helloworld");
 
@@ -69,6 +74,6 @@ public class HelloworldProcessTest extends JbpmJUnitBaseTestCase {
         assertNodeTriggered(processInstance.getId(), "StartProcess", "ScriptTask", "BusinessRules");
 
         assertNodeActive(processInstance.getId(), kSession, "Timer");
-
+        
     }
 }

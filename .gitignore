@@ -11,3 +11,4 @@ MANIFEST.MF
 .metadata
 out
 *.log
+*.tlog

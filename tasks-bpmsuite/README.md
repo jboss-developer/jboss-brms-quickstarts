@@ -1,9 +1,9 @@
-helloworld-bpmsuite: A Basic BPM Suite example
-==============================================
+tasks-bpmsuite: An BPM Suite example with User Tasks
+====================================================
 Author: Rafael Benevides  
-Level: Beginner  
-Technologies: Drools, BRMS 
-Summary: Shows how to run a Process that was defined on a JBoss BPM Suite server  
+Level: Advanced  
+Technologies: BPMS
+Summary: Shows how to run a Process with user tasks that was defined on a JBoss BPM Suite server  
 Target Product: BPM-SUITE  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
@@ -12,10 +12,11 @@ What is it?
 
 This project demonstrates how to use BPM Suite to manage and deploy business processes.
 
-* The `HelloworldProcessTest` class starts a process that was defined in BPM Suite
+* The `ApprovalProcessTest` class starts a process that was defined in BPM Suite
 
-_Note_: The bpms-project.helloworld process is defined in the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
+_Note_: The bpms-project.approval process is defined in the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
+The process begins by asking for the amount to be approved. If the amount is less than 10.000 USD, it is automatically approved. If the amount is higher than 10.000 USD, it must wait for a user to manually approve or deny the amount.
 
 The Maven dependency is available in the following Maven Repository: <http://localhost:8080/business-central/maven2/>
 
@@ -102,19 +103,41 @@ When you run the tests, JUnit will present you test report summary:
     -------------------------------------------------------
      T E S T S
     -------------------------------------------------------
-    Running org.jboss.quickstarts.brms.HelloworldProcessTest
-    Fev 28, 2014 12:08:39 PM org.jbpm.test.JbpmJUnitBaseTestCase <init>
-    INFO: Configuring entire test case to have data source enabled false and session persistence enabled false with persistence unit name org.jbpm.persistence.jpa
-    ================================
-    = Starting Process Helloworld. =
-    ================================
-    Hello World!
-    Hello World from rule!
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.302 sec
+    Running org.jboss.quickstarts.brms.ApprovalProcessTest
+    Amount asked: 10500 USD
+    ==============================
+    = Starting Process Approval. =
+    ==============================
+    Approval process started. Value: 10500.0
+    Waiting for Approval
+    There's a Task Assigned
+    Task Claimed
+    Task Started
+    Task completed
+    Not approved
+    Amount asked: 10500 USD
+    ==============================
+    = Starting Process Approval. =
+    ==============================
+    Approval process started. Value: 10500.0
+    Waiting for Approval
+    There's a Task Assigned
+    Task Claimed
+    Task Started
+    Task completed
+    Approved
+    Amount asked: 100 USD
+    ==============================
+    = Starting Process Approval. =
+    ==============================
+    Approval process started. Value: 100.0
+    Auto approved
+    Approved
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.232 sec
     
     Results :
     
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 
 
 Test the Quickstart in JBoss Developer Studio or Eclipse
