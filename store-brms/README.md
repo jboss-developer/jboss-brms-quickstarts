@@ -142,14 +142,17 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.StoreBRMSTest
-    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar]
-    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Fev 17, 2014 11:11:58 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
+    17:37:21.256 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
+    17:37:21.261 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar
+    17:37:21.407 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Found and used pom.properties META-INF/maven/org.jboss.quickstarts.brms/my-store-brms-kmodule/pom.properties
+    17:37:21.411 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0
+    17:37:21.415 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar]
+    17:37:21.415 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
+    17:37:21.415 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar
+    17:37:21.420 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Found and used pom.properties META-INF/maven/org.jboss.quickstarts.brms/helloworld-brms-kmodule/pom.properties
+    17:37:21.421 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0
+    17:37:21.421 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
+    17:37:22.372 [main] DEBUG o.drools.core.reteoo.ReteooRuleBase - Starting Engine in PHREAK mode
     ** Testing VIP customer **
     VIP discount applied
     Sale approved
@@ -165,7 +168,7 @@ When you run the tests, JUnit will present you test report summary:
     Bad customer. Sale denied
     sale registered to salesmen
     ** Testing if all sales were registered to salesman **
-    Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.734 sec
+    Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.846 sec
     
     Results :
     

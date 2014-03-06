@@ -103,19 +103,16 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.HelloworldProcessTest
-    Fev 28, 2014 12:08:39 PM org.jbpm.test.JbpmJUnitBaseTestCase <init>
-    INFO: Configuring entire test case to have data source enabled false and session persistence enabled false with persistence unit name org.jbpm.persistence.jpa
     ================================
     = Starting Process Helloworld. =
     ================================
     Hello World!
     Hello World from rule!
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.302 sec
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.482 sec
     
     Results :
     
     Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
 
 Test the Quickstart in JBoss Developer Studio or Eclipse
 -------------------------------------

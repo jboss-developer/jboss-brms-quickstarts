@@ -47,15 +47,14 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.helloworlddrl.HelloWorldDRLTest
-    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: file:/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes/META-INF/kmodule.xml
-    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
-    WARNING: Unable to load pom.properties tried recursing down from/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes
+    17:35:06.378 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: file:/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes/META-INF/kmodule.xml
+    17:35:06.384 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=file url=/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes
+    17:35:06.571 [main] WARN  o.d.c.k.b.impl.ClasspathKieProject - Unable to load pom.properties tried recursing down from/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes
     null
-    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject getPomProperties
-    INFO: Recursed up folders,  found and used pom.xml /Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/pom.xml
-    Fev 17, 2014 10:43:21 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:FileKieModule[ ReleaseId=org.jboss.quickstarts.brms:brms-helloworld-drl:6.1.0-build-SNAPSHOTfile=/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes]
+    17:35:06.595 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Recursed up folders,  found and used pom.xml /Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/pom.xml
+    17:35:06.599 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:brms-helloworld-drl:6.1.0-build-SNAPSHOT
+    17:35:06.610 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:FileKieModule[ ReleaseId=org.jboss.quickstarts.brms:brms-helloworld-drl:6.1.0-build-SNAPSHOTfile=/Users/rafaelbenevides/projetos/jdf/Quickstarts/jboss-brms-quickstarts/helloworld-drl/target/classes]
+    17:35:07.716 [main] DEBUG o.drools.core.reteoo.ReteooRuleBase - Starting Engine in PHREAK mode
     ** Testing VIP customer **
     VIP discount applied
     Sale approved
@@ -63,7 +62,7 @@ When you run the tests, JUnit will present you test report summary:
     Sale approved
     ** Testing BAD customer **
     BAD customer. Sale denied
-    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.857 sec
+    Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.105 sec
     
     Results :
     

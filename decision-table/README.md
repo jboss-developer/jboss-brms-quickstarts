@@ -121,13 +121,15 @@ Investigate the Console Output
 When you run the tests, JUnit will present you test report summary:
 
     -------------------------------------------------------
-     T E S T S
+    T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.DecisionTableTest
-    Fev 17, 2014 10:31:46 AM org.drools.compiler.kie.builder.impl.ClasspathKieProject discoverKieModules
-    INFO: Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    Fev 17, 2014 10:31:46 AM org.drools.compiler.kie.builder.impl.KieRepositoryImpl addKieModule
-    INFO: KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar]
+    17:00:11.525 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar!/META-INF/kmodule.xml
+    17:00:11.535 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar
+    17:00:11.712 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Found and used pom.properties META-INF/maven/org.jboss.quickstarts.brms/decision-table-kmodule/pom.properties
+    17:00:11.717 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0
+    17:00:11.720 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:decision-table-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/decision-table-kmodule/6.1.0/decision-table-kmodule-6.1.0.jar]
+    17:00:12.900 [main] DEBUG o.drools.core.reteoo.ReteooRuleBase - Starting Engine in PHREAK mode
     ** Testing senior from NY or NC **
     Standard male price (with incidents) applied
     Promotional price for NY/NC seniors applied
@@ -161,7 +163,7 @@ When you run the tests, JUnit will present you test report summary:
     ** Testing standard price for Males with more than 21 years old **
     Standard male price applied
     Resulting price: 1000
-    Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.973 sec
+    Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.139 sec
     
     Results :
     
