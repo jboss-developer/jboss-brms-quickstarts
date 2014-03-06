@@ -1,4 +1,4 @@
-tasks-bpmsuite: An BPM Suite example with User Tasks
+tasks-bpmsuite: A BPM Suite example with User Tasks
 ====================================================
 Author: Rafael Benevides  
 Level: Advanced  
