@@ -20,7 +20,7 @@
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-helloworld-bpmsuite</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
-    <name>JBoss BRMS Quickstart: helloworld-bpmsuite</name>
+    <name>JBoss BPM-SUITE Quickstart: helloworld-bpmsuite</name>
 
     <licenses>
         <license>
