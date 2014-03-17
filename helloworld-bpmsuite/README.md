@@ -2,7 +2,7 @@ helloworld-bpmsuite: A Basic BPM Suite example
 ==============================================
 Author: Rafael Benevides  
 Level: Beginner  
-Technologies: Drools, BRMS 
+Technologies: Drools, BRMS    
 Summary: Shows how to run a Process that was defined on a JBoss BPM Suite server  
 Target Product: BPM-SUITE  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  

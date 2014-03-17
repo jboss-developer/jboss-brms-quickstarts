@@ -48,9 +48,9 @@ public class Resources {
         }
         return items;
     }
-    
+
     @Produces
-    public FacesContext getFacesContext(){
+    public FacesContext getFacesContext() {
         return FacesContext.getCurrentInstance();
     }
 

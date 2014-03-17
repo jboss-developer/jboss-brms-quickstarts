@@ -74,6 +74,6 @@ public class HelloworldProcessTest extends JbpmJUnitBaseTestCase {
         assertNodeTriggered(processInstance.getId(), "StartProcess", "ScriptTask", "BusinessRules");
 
         assertNodeActive(processInstance.getId(), kSession, "Timer");
-        
+
     }
 }

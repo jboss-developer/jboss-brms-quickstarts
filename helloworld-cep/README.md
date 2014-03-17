@@ -3,7 +3,7 @@ helloworld-cep: A Complex Event Processing Hello World
 Author: Rafael Benevides  
 Level: Intermediate  
 Technologies: CDI, JSF, Drools  
-Summary: This Quickstart shows a basic example for CEP
+Summary: This Quickstart shows a basic example for CEP  
 Target Product: BRMS  
 Product Versions: EAP 6.1, EAP 6.2  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts>  

@@ -17,7 +17,7 @@
 package org.jboss.quickstarts.brms.helloworlddrl;
 
 public enum CustomerType {
-    
+
     VIP,
     REGULAR,
     BAD

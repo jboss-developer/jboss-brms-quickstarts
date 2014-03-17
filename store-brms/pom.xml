@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
-    Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+    Copyright 2014, Red Hat, Inc. and/or its affiliates, and individual
     contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
 
@@ -16,12 +16,12 @@
     limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-store-brms</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
     <name>JBoss BRMS Quickstart: store-brms</name>
-
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -29,7 +29,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
         </license>
     </licenses>
-
     <properties>
 
         <!-- Explicitly declaring the source encoding eliminates the following
@@ -48,7 +47,6 @@
         <!-- The tests are skipped by Default because it fails without 'brms' profile -->
         <maven.test.skip>true</maven.test.skip>
     </properties>
-
     <dependencyManagement>
         <dependencies>
             <!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill
@@ -73,7 +71,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>org.kie</groupId>
@@ -100,12 +97,9 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-
     <build>
         <finalName>${project.artifactId}</finalName>
     </build>
-
     <profiles>
         <!-- The enable-test profile just enables the test to be combiled -->
         <profile>

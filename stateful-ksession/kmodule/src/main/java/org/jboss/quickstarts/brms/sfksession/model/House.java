@@ -32,9 +32,9 @@ public class House implements Serializable {
 
     private List<Room> rooms = new ArrayList<Room>();
     private List<Sprinkler> sprinklers = new ArrayList<Sprinkler>();
-    
+
     private boolean alarmOn;
-    
+
     @PostConstruct
     public void buildHouse() {
         Room kitchen = new Room("kitchen");
@@ -87,14 +87,14 @@ public class House implements Serializable {
     public List<Room> getRooms() {
         return rooms;
     }
-    
+
     /**
      * @return the alarmOn
      */
     public boolean isAlarmOn() {
         return alarmOn;
     }
-    
+
     /**
      * @param alarmOn the alarmOn to set
      */

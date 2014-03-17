@@ -31,10 +31,9 @@ public class Transaction {
     private String deniedCause;
 
     private TransactionType type;
-    
-    
+
     public Transaction() {
-     
+
     }
 
     /**

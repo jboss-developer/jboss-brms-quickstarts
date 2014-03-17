@@ -21,18 +21,16 @@ public class Sprinkler {
     private boolean on;
 
     private Room room;
-    
+
     private int serialNumber;
-    
+
     private static int serialCount;
-    
-    
 
     public Sprinkler(Room room) {
         this.room = room;
         this.serialNumber = serialCount++;
     }
-  
+
     public int getSerialNumber() {
         return serialNumber;
     }

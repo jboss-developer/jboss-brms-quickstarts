@@ -16,7 +16,6 @@
  */
 package org.jboss.quickstarts.brms.cep.model;
 
-
 /**
  * @author rafaelbenevides
  * 
@@ -24,9 +23,9 @@ package org.jboss.quickstarts.brms.cep.model;
  *
  */
 public enum TransactionType {
-    
+
     CREDIT_CARD,
     WITHDRAW,
     DEPOSIT,
-    
+
 }

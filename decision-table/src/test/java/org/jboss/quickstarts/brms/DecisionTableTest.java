@@ -69,7 +69,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(1800, priceQuotation.getPrice().intValue());
     }
 
@@ -88,7 +88,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(2000, priceQuotation.getPrice().intValue());
     }
 
@@ -107,7 +107,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(2500, priceQuotation.getPrice().intValue());
     }
 
@@ -126,7 +126,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(1500, priceQuotation.getPrice().intValue());
     }
 
@@ -145,7 +145,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(1000, priceQuotation.getPrice().intValue());
     }
 
@@ -164,7 +164,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(1100, priceQuotation.getPrice().intValue());
     }
 
@@ -183,7 +183,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(900, priceQuotation.getPrice().intValue());
     }
 
@@ -203,7 +203,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(200, priceQuotation.getPrice().intValue());
     }
 
@@ -223,7 +223,7 @@ public class DecisionTableTest {
         objects.add(driverProfile);
         kSession.execute(objects);
         PriceQuotation priceQuotation = (PriceQuotation) kSession.getGlobals().get(QUOTATION_GLOBAL);
-        System.out.println("Resulting price: "  + priceQuotation.getPrice());
+        System.out.println("Resulting price: " + priceQuotation.getPrice());
         assertEquals(100, priceQuotation.getPrice().intValue());
     }
 }

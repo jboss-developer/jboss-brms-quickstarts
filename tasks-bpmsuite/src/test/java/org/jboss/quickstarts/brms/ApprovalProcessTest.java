@@ -67,7 +67,7 @@ public class ApprovalProcessTest extends JbpmJUnitBaseTestCase {
 
         disposeRuntimeManager();
     }
-    
+
     @Test
     public void testProcessHighAmmountApproved() {
         createRuntimeManager(Strategy.PROCESS_INSTANCE, "manager", "approval.bpmn2");
@@ -115,7 +115,7 @@ public class ApprovalProcessTest extends JbpmJUnitBaseTestCase {
         assertNodeTriggered(processInstance.getId(), "Approved");
 
     }
-    
+
     @Test
     public void testProcessHighAmmountDenied() {
         createRuntimeManager(Strategy.PROCESS_INSTANCE, "manager", "approval.bpmn2");

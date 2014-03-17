@@ -2,7 +2,7 @@ helloworld-brms: A Basic BRMS example
 ======================================
 Author: Rafael Benevides  
 Level: Beginner  
-Technologies: Drools, BRMS 
+Technologies: Drools, BRMS    
 Summary: Shows how to use a KModule from a BRMS server  
 Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  

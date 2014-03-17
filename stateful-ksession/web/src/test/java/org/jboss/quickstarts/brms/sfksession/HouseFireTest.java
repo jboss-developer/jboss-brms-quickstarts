@@ -91,7 +91,7 @@ public class HouseFireTest {
         assertTrue(sprinkler.isOn());
         // Alarm should be On
         assertTrue(house.isAlarmOn());
-        
+
         //Remove the fire
         kieSession.delete(fireHandle);
         // There's no fire on the House
@@ -100,7 +100,7 @@ public class HouseFireTest {
         assertFalse(sprinkler.isOn());
         // Alarm should be Off
         assertFalse(house.isAlarmOn());
-        
+
     }
 
     @Test

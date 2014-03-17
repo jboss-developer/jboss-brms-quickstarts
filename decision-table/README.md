@@ -2,8 +2,8 @@ decision-table: Insurance company prices using Decision Tables
 ==============================================================
 Author: Rafael Benevides  
 Level: Intermediate  
-Technologies: Drools, BRMS 
-Summary: Shows how to use Decision Tables from a BRMS server
+Technologies: Drools, BRMS    
+Summary: Shows how to use Decision Tables from a BRMS server  
 Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
