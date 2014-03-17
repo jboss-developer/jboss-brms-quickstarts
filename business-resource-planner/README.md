@@ -1,6 +1,6 @@
 business-resource-planner: Shows how to solve a vehicle routing problem
 =======================================================================
-Author: Rafael Benevides   
+Author: Geoffrey De Smet, adapted by Rafael Benevides   
 Level: Advanced  
 Technologies: BRMS, Drools, Optaplanner  
 Summary: This Quickstarts shows how to solve a vehicle routing problem  
