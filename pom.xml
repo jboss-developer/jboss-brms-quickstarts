@@ -24,7 +24,7 @@
         <relativePath/>
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
-    <artifactId>brms-quickstarts-parent</artifactId>
+    <artifactId>brms-quickstart-parent</artifactId>
     <version>6.1.0-build-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS Quickstart: jboss-brms-quickstarts</name>
@@ -55,5 +55,6 @@
         <module>stateful-ksession</module>
         <module>store-brms</module>
         <module>tasks-bpmsuite</module>
+        <module>business-resource-planner</module>
     </modules>
 </project>
