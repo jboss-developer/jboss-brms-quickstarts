@@ -93,15 +93,44 @@ public class RoutingController {
         // shutdown any previous running solver
         solver.terminateEarly();
         // setup solver
-        solver.setPlanningProblem(createRoutingSolution());
-        // run solver on a separated Thread
-        solvingExecutor.submit(new Runnable() {
-            public void run() {
-                solver.solve();
-            }
-        });
-        facesContext.addMessage(null, new FacesMessage("Solving... Below is a temporary solution"));
-        return "vehicleroutingsolution.xhtml";
+        VehicleRoutingSolution unsolvedSolution = createRoutingSolution();
+
+        try {
+            validateDemandVsCapacity(unsolvedSolution);
+            // run solver on a separated Thread
+            solver.setPlanningProblem(unsolvedSolution);
+            solvingExecutor.submit(new Runnable() {
+                public void run() {
+                    solver.solve();
+                }
+            });
+            facesContext.addMessage(null, new FacesMessage("Solving... Below is a temporary solution"));
+            return "vehicleroutingsolution.xhtml";
+        } catch (OverCapacityException e) {
+            facesContext.addMessage(null, new FacesMessage(e.getMessage()));
+            return null;
+        }
+
+    }
+
+    /**
+     * Verify if the demand of the randomly created customers and sufficient to the demand of the vehicles
+     * 
+     * @param unsolvedSolution
+     * @throws OverCapacityException when the capacity is less than the demand
+     */
+    private void validateDemandVsCapacity(VehicleRoutingSolution unsolvedSolution) throws OverCapacityException {
+        int demandTotal = 0;
+        int capacityTotal = 0;
+        for (Customer c : unsolvedSolution.getCustomerList()) {
+            demandTotal += c.getDemand();
+        }
+        for (Vehicle v : unsolvedSolution.getVehicleList()) {
+            capacityTotal += v.getCapacity();
+        }
+        if (demandTotal > (capacityTotal + 5)) {
+            throw new OverCapacityException(demandTotal, capacityTotal);
+        }
     }
 
     /**
