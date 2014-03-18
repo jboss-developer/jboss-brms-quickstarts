@@ -28,12 +28,11 @@
 				    <h:commandButton action="#{routingController.terminateEarly()}" value="Terminate Early"  />
                     <h:commandButton action="vehicleroutingproblem" value="Back"/>
                     <br />
-				    <img id="showSchedule" src="vrpImage/image.png" />
+				    <img id="showSchedule" src="vrpImage.png" />
 				</form>
 				<script type="text/javascript">
 			     function reloadImage(){
-			         d = new Date();
-			            $("#showSchedule").attr("src", "vrpImage/image"+d.getTime() + ".png");
+			            $("#showSchedule").attr("src", "vrpImage.png");
 			         }
 			         $(document).ready(function() {
 			             setInterval('reloadImage()', 300); // 300ms

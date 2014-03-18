@@ -35,7 +35,7 @@ import org.jboss.quickstarts.planner.model.VehicleRoutingSolution;
  * @author rafaelbenevides
  * 
  */
-@WebServlet(value = "/vrpImage/*")
+@WebServlet(value = "/vrpImage.png")
 public class VrpImageServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -45,6 +45,10 @@ public class VrpImageServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        // Avoid image caching
+        resp.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        resp.setHeader("Pragma", "no-cache");
+        resp.setHeader("Expires", "0");
         HttpSession session = req.getSession();
         VehicleRoutingSolution shownSolution = (VehicleRoutingSolution) session.getAttribute("solution");
         if (shownSolution == null) {
