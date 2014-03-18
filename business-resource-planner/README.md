@@ -11,14 +11,16 @@ Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>
 What is it?
 -----------
 
-This project demonstrates the use of Business Resource Planner to solve a use case where a fleet of vehicles needs to pick up the objects of each customer and bring them to the depot. Each vehicle can service multiple customers, but it has a limited capacity.
+Business Resource Planner a lightweight, embeddable planning engine that helps organizations manage sets of constrained resources such as employees, assets, and time. It helps optimize resource usage to allow a business to increase productivity using fewer resources.
 
-A planning problem has a number of solutions. There are several categories of solutions:
+This project demonstrates how to use Business Resource Planner to solve resource planning issues related to package pickup. A limited fleet of vehicles must pick up packages from multiple customers and deliver them to a central location. Each vehicle can service multiple customers but is limited by time, distance, and fuel cost constraints. To make it more interesting, this example uses randomly generated numbers to simulate how time, distance, and truck capacity constraints can also impact the routing plans.
 
-A `possible solution` is any solution, whether or not it breaks any number of constraints. Planning problems tend to have an incredibly large number of possible solutions. Many of those solutions are worthless.
-A `feasible solution` is a solution that does not break any (negative) hard constraints. The number of feasible solutions tends to be relative to the number of possible solutions. Sometimes there are no feasible solutions. Every feasible solution is a possible solution.
-An `optimal solution` is a solution with the highest score. Planning problems tend to have 1 or a few optimal solutions. There is always at least 1 optimal solution, even in the case that there are no feasible solutions and the optimal solution isn't feasible.
-The `best solution` found is the solution with the highest score found by an implementation in a given amount of time. The best solution found is likely to be feasible and, given enough time, it's an optimal solution.
+This planning problem has a number of solutions that can be categorized as follows:
+
+* A `possible solution` is any solution, whether or not it breaks any number of constraints. Planning problems tend to have an incredibly large number of possible solutions. Many of those solutions are worthless.
+* A `feasible solution` is a solution that does not break any (negative) hard constraints. The number of feasible solutions tends to be relative to the number of possible solutions. Sometimes there are no feasible solutions. Every feasible solution is a possible solution.
+* An `optimal solution` is a solution with the highest score. Planning problems tend to have 1 or a few optimal solutions. There is always at least 1 optimal solution, even in the case that there are no feasible solutions and the optimal solution isn't feasible.
+* The `best solution` found is the solution with the highest score found by an implementation in a given amount of time. The best solution found is likely to be feasible and, given enough time, it's an optimal solution.
 
 
 System requirements
@@ -66,23 +68,20 @@ Access the application
 
 Access the running application in a browser at the following URL:  <http://localhost:8080/brms-business-resource-planner>
 
-You are presented to a form that allows you to create random customers and vehicles.
+You are presented with a form that allows you to enter the number of Customers and Vehicles to use in the Routing Problem Definition.
 
-- Specify any ammount of Customers and Vehicles and click on `Solve` button.
-You will be presented to a page where you can see how Business Resource Planner improves the vehicle routing to consume less fuel.
-The best solution found is the solution that consume less fuel (on the botton of the page) in a given amount of time. The best solution found is likely to be feasible and, given enough time, it's an optimal solution.
+- Specify any number of Customers and Vehicles, then click the `Solve` button.
 
-- Click on `Terminate Early` button.
-A message `The solver has been terminated. Below is the final solution` is displayed.
+    * You are presented with a page that displays diagrams representing potential Routing Problem Solutions. Business Resource Planner continues to process the data and display diagrams of solutions that consume less and less fuel.
+    * The best solution, the one that consumes the least fuel in a given amount of time, is finally displayed at the bottom of the page. The best solution found is likely to be feasible and, given enough time, an optimal solution.
 
-- Click on `Back` button.
-You can change the values of Customers and Vehicles. If the number of Customers is higher than the number of Vehicles you can see a red `Not feasible` displayed on the botton of the page.
+- Click the `Terminate Early` button. A message `The solver has been terminated. Below is the final solution` is displayed.
+
+- Click the `Back` button to change the number of Customers and Vehicles. If the Customer demand exceeds the capacity of the Vehicles, the message `Not Feasible` is displayed in red at the bottom of the page.
 
 
 Undeploy the Archive
 --------------------
-
-Contributor: For example: 
 
 1. Make sure you have started the JBoss EAP server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
@@ -92,14 +91,11 @@ Contributor: For example:
 
 Run the Quickstart in JBoss Developer Studio or Eclipse
 -------------------------------------
-Contributor: For example: 
 
 You can also start the server and deploy the quickstarts from Eclipse using JBoss tools. For more information, see [Use JBoss Developer Studio or Eclipse to Run the Quickstarts](../README.md#use-jboss-developer-studio-or-eclipse-to-run-the-quickstarts) 
 
 Debug the Application
 ------------------------------------
-
-Contributor: For example: 
 
 If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following commands to pull them into your local repository. The IDE should then detect them.
 
