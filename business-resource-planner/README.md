@@ -13,7 +13,7 @@ What is it?
 
 Business Resource Planner a lightweight, embeddable planning engine that helps organizations manage sets of constrained resources such as employees, assets, and time. It helps optimize resource usage to allow a business to increase productivity using fewer resources.
 
-This project demonstrates how to use Business Resource Planner to solve resource planning issues related to package pickup. A limited fleet of vehicles must pick up packages from multiple customers and deliver them to a central location. Each vehicle can service multiple customers but is limited by time, distance, and fuel cost constraints. To make it more interesting, this example uses randomly generated numbers to simulate how time, distance, and truck capacity constraints can also impact the routing plans.
+This project demonstrates how to use Business Resource Planner to solve resource planning issues related to package pickup. A limited fleet of vehicles must pick up packages from multiple customers and deliver them to a central location. Each vehicle can service multiple customers but is limited by time, distance, and fuel cost constraints. To make it more interesting, this example uses randomly generated numbers to simulate how demand, distance, and truck capacity constraints can also impact the routing plans.
 
 This planning problem has a number of solutions that can be categorized as follows:
 
