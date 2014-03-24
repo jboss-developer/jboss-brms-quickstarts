@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-stateful-ksession</artifactId>
-    <version>6.1.0-build-SNAPSHOT</version>
+    <version>6.0.1-build-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS Quickstart: stateful-ksession</name>
     <url>http://jboss.org/jbossas</url>
@@ -41,7 +41,7 @@
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom.eap>6.2.0.GA</version.jboss.bom.eap>
 
-        <version.jboss.bom.brms>6.1.0-build-8</version.jboss.bom.brms>
+        <version.jboss.bom.brms>6.0.1-build-1</version.jboss.bom.brms>
 
         <!-- other plugin versions -->
         <version.surefire.plugin>2.10</version.surefire.plugin>
