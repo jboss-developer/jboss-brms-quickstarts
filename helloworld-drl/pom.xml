@@ -39,7 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-        <version.jboss.bom.eap>6.2.0.GA</version.jboss.bom.eap>
+        <version.jboss.bom>1.0.4.Final-redhat-9</version.jboss.bom>
         <version.jboss.bom.brms>6.0.2.Final</version.jboss.bom.brms>
 
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -54,9 +54,9 @@
                 the JBoss stack of the Java EE 6 APIs, with some extras tools for your project, such
                 as Arquillian for testing) -->
             <dependency>
-                <groupId>org.jboss.bom.eap</groupId>
+                <groupId>org.jboss.bom</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${version.jboss.bom.eap}</version>
+                <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
