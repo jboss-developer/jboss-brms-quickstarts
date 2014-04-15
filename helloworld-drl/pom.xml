@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-helloworld-drl</artifactId>
-    <version>6.0.1-build-SNAPSHOT</version>
+    <version>6.0.2.GA-redhat-1</version>
     <name>JBoss BRMS Quickstart: helloworld-drl</name>
     <licenses>
         <license>
