@@ -54,7 +54,7 @@
   <!-- Configure the Business Central repository -->
   <servers>
     <server>
-      <id>bpms-m2-repo</id>
+      <id>brms-m2-repo</id>
       <username>quickstartUser</username>
       <password>quickstartPwd1!</password>
       <configuration>
