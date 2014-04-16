@@ -66,6 +66,19 @@
         </httpConfiguration>
       </configuration>
     </server>
+    <server>
+      <id>bpms-m2-repo</id>
+      <username>quickstartUser</username>
+      <password>quickstartPwd1!</password>
+      <configuration>
+        <wagonProvider>httpclient</wagonProvider>
+        <httpConfiguration>
+          <all>
+            <usePreemptive>true</usePreemptive>
+          </all>
+        </httpConfiguration>
+      </configuration>
+    </server>
   </servers>
 
   <activeProfiles>
