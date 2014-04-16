@@ -14,7 +14,7 @@ This project demonstrates how to use BPM Suite to manage and deploy business pro
 
 * The `ApprovalProcessTest` class starts a process that was defined in BPM Suite
 
-_Note_: The bpms-project.approval process is defined in the following dependency: org.jboss.quickstarts.brms:bpms_project:6.1.0. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
+_Note_: The bpms-project.approval process is defined in the following dependency: org.jboss.quickstarts.brms:bpms_project:1.0.0. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
 The process begins by asking for the amount to be approved. If the amount is less than 10.000 USD, it is automatically approved. If the amount is higher than 10.000 USD, it must wait for a user to manually approve or deny the amount.
 
@@ -80,7 +80,7 @@ Deploy the BPM Suite Process Project
    * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
    * You are prompted for a comment. Add a comment and click on `Save` button.
 
-This deploys the `org.jboss.quickstarts.brms:bpms_project:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deploy` --> `Deployments`.
+This deploys the `org.jboss.quickstarts.brms:bpms_project:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deploy` --> `Deployments`.
 
 
 Run the Tests 
@@ -91,7 +91,7 @@ Run the Tests
 
         mvn clean test -Penable-test,bpms
 
-The `bpms` profile enables the <http://localhost:8080/business-central/maven2/> repository and adds the `org.jboss.quickstarts.brms:bpms_project:6.1.0` as a project dependency. 
+The `bpms` profile enables the <http://localhost:8080/business-central/maven2/> repository and adds the `org.jboss.quickstarts.brms:bpms_project:1.0.0` as a project dependency. 
 
 The tests should complete successfully.
 

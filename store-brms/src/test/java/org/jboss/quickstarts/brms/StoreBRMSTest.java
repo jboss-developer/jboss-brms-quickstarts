@@ -61,7 +61,7 @@ public class StoreBRMSTest {
 
         KieServices kieServices = KieServices.Factory.get();
         KieContainer kContainer = kieServices.getKieClasspathContainer();
-        // Use a specified KSession from org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0
+        // Use a specified KSession from org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0
         kSession = kContainer.newStatelessKieSession("storeKSession");
         // Setup the global variable with the Salesman
         salesman.setAllSales(new ArrayList<Sale>());
