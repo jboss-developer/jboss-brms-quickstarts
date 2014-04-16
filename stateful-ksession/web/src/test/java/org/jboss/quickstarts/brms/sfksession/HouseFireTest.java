@@ -35,6 +35,7 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.resolver.api.maven.Maven;
+import org.jboss.shrinkwrap.resolver.api.maven.MavenResolverSystem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.runtime.KieSession;
@@ -62,8 +63,18 @@ public class HouseFireTest {
     public static Archive<?> getDeployment() {
         Logger.getLogger("org.jboss.shrinkwrap.resolver").setLevel(Level.SEVERE);
         File pom = new File("pom.xml");
-        File[] libs = Maven.resolver()
-            .loadPomFromFile(pom)
+
+        MavenResolverSystem mrs;
+
+        String settings = System.getProperty("settings");
+
+        if (settings != null) {
+            mrs = Maven.configureResolver().fromFile(settings);
+        } else {
+            mrs = Maven.resolver();
+        }
+
+        File[] libs = mrs.loadPomFromFile(pom)
             .resolve("org.kie:kie-api", "org.drools:drools-compiler", "org.jboss.quickstarts.brms:brms-stateful-ksession-kmodule")
             // Avoid using org.jboss.quickstarts.brms:brms-stateful-ksession-kmodule from reactor
             .withClassPathResolution(false)
