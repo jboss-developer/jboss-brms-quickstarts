@@ -101,6 +101,9 @@ Import the BRMS Repository
 
          Repository Name:      jboss-brms-repository
          Organizational Unit:  example
+            either
+         Git URL:              file://path/to/jboss-brms-repository
+            or
          Git URL:              https://github.com/jboss-developer/jboss-brms-repository.git
          User Name:            <leave blank>
          Password:             <leave blank>
