@@ -16,9 +16,9 @@ This project demonstrates how to use BRMS to manage and deploy modules that cont
 * The `StoreBRMSTest` class also creates a SalesMan object instance that is used as a global variable inside the `StatelessKieSession`
 * These Sales objects are passed to the `StatelessKieSession` class, which runs the rules against them to verify and apply discounts.
 
-The `Person`, `Sale`, `Customer` and `CustomerType` are defined in a BRMS Kmodule library that is added to the project with the following dependency: `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0`.
+The `Person`, `Sale`, `Customer` and `CustomerType` are defined in a BRMS Kmodule library that is added to the project with the following dependency: `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0`.
 
-The `SalesMan` class extendes the `Person` class. It is defined in another Kmodule that is added to the project with this dependency: `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0`. This KModule declares a KBase named `storeKBase` that includes the `helloworldKBase` and declares a KSession named `storeKSession`. It also includes:
+The `SalesMan` class extendes the `Person` class. It is defined in another Kmodule that is added to the project with this dependency: `org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0`. This KModule declares a KBase named `storeKBase` that includes the `helloworldKBase` and declares a KSession named `storeKSession`. It also includes:
 
 * A DRL file named `customerAge` that is a free form rule that contains a rule that denies the sale to a customer that has less than 18 years old.
 * A DRL file named `storeFunctions` that contains a function to calculate the age based on the customer birthdate.
@@ -28,7 +28,7 @@ The `SalesMan` class extendes the `Person` class. It is defined in another Kmodu
 
 These predefined KModules are available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>
 
-_NOTE:_ This project only includes the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` dependency. The `helloworld-brms-kmodule` is included because it is a Maven transitive dependency of `my-store-brms-kmodule`. These dependencies are located in the following Maven Repository: <http://localhost:8080/business-central/maven2/>
+_NOTE:_ This project only includes the `org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0` dependency. The `helloworld-brms-kmodule` is included because it is a Maven transitive dependency of `my-store-brms-kmodule`. These dependencies are located in the following Maven Repository: <http://localhost:8080/business-central/maven2/>
 
 This quickstart does not contain a user interface layer. 
 
@@ -102,7 +102,7 @@ Deploy BRMS kmodule
    * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
    * You are prompted for a comment. Add a comment and click on `Save` button.
 
-   This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0` and `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
+   This deploys the `org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0` and `org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
 
 
 Run the Tests 
@@ -129,7 +129,7 @@ Run the Tests
 
         mvn clean test -Penable-test,brms
 
-   The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0` as a project dependency. 
+   The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0` as a project dependency. 
 
    Now the tests complete successfully.
 
@@ -142,16 +142,16 @@ When you run the tests, JUnit will present you test report summary:
      T E S T S
     -------------------------------------------------------
     Running org.jboss.quickstarts.brms.StoreBRMSTest
-    17:37:21.256 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    17:37:21.261 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar
+    17:37:21.256 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/1.0.0/my-store-brms-kmodule-1.0.0.jar!/META-INF/kmodule.xml
+    17:37:21.261 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/1.0.0/my-store-brms-kmodule-1.0.0.jar
     17:37:21.407 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Found and used pom.properties META-INF/maven/org.jboss.quickstarts.brms/my-store-brms-kmodule/pom.properties
-    17:37:21.411 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0
-    17:37:21.415 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/6.1.0/my-store-brms-kmodule-6.1.0.jar]
-    17:37:21.415 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar!/META-INF/kmodule.xml
-    17:37:21.415 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar
+    17:37:21.411 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0
+    17:37:21.415 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/my-store-brms-kmodule/1.0.0/my-store-brms-kmodule-1.0.0.jar]
+    17:37:21.415 [main] INFO  o.d.c.k.b.impl.ClasspathKieProject - Found kmodule: jar:file:/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/1.0.0/helloworld-brms-kmodule-1.0.0.jar!/META-INF/kmodule.xml
+    17:37:21.415 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - KieModule URL type=jar url=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/1.0.0/helloworld-brms-kmodule-1.0.0.jar
     17:37:21.420 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Found and used pom.properties META-INF/maven/org.jboss.quickstarts.brms/helloworld-brms-kmodule/pom.properties
-    17:37:21.421 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0
-    17:37:21.421 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:6.1.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/6.1.0/helloworld-brms-kmodule-6.1.0.jar]
+    17:37:21.421 [main] DEBUG o.d.c.k.b.impl.ClasspathKieProject - Discovered classpath module org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0
+    17:37:21.421 [main] INFO  o.d.c.k.b.impl.KieRepositoryImpl - KieModule was added:ZipKieModule[ ReleaseId=org.jboss.quickstarts.brms:helloworld-brms-kmodule:1.0.0file=/Users/rafaelbenevides/.m2/repository/org/jboss/quickstarts/brms/helloworld-brms-kmodule/1.0.0/helloworld-brms-kmodule-1.0.0.jar]
     17:37:22.372 [main] DEBUG o.drools.core.reteoo.ReteooRuleBase - Starting Engine in PHREAK mode
     ** Testing VIP customer **
     VIP discount applied
