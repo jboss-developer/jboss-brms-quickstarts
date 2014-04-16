@@ -30,8 +30,8 @@
 
     <!-- Configure the optimization algorithm(s) -->
     <termination>
-<!--         <secondsSpentLimit>60</secondsSpentLimit> -->
-        <minutesSpentLimit>5</minutesSpentLimit>
+<!--         <maximumSecondsSpend>60</maximumSecondsSpend> -->
+        <maximumMinutesSpend>5</maximumMinutesSpend>
     </termination>
     <constructionHeuristic>
         <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
