@@ -142,7 +142,7 @@
                 <dependency>
                     <groupId>org.jboss.quickstarts.brms</groupId>
                     <artifactId>bpms_project</artifactId>
-                    <version>6.1.0</version>
+                    <version>6.0.2</version>
                 </dependency>
             </dependencies>
 
