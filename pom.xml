@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
-        <version>8</version>
+        <version>10</version>
         <relativePath/>
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
