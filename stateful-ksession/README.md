@@ -98,6 +98,7 @@ _NOTE: The following commands assume you have configured your Maven user setting
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command prompt and navigate to the root directory of this quickstart.
 3. Type the following command to run the test goal with the following profile activated:
+4. Because Arquillian Test need to access customer settings.xml, please make sure your customermized settings.xml  was copied into ~/.m2/settings.xml or ../settings.xml was copied into ~/.m2/settings.xml by default.
 
         mvn clean install test -Parq-jbossas-remote
 
