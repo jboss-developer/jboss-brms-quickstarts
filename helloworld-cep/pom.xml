@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-helloworld-cep</artifactId>
-    <version>6.0.2.GA-redhat-3</version>
+    <version>6.0.2.GA-redhat-4</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS Quickstart: helloworld-cep</name>
     <url>http://jboss.org/jbossas</url>
@@ -41,7 +41,7 @@
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>1.0.4.Final-redhat-9</version.jboss.bom>
 
-        <version.jboss.bom.brms>6.0.2.GA-redhat-3</version.jboss.bom.brms>
+        <version.jboss.bom.brms>6.0.2.GA-redhat-4</version.jboss.bom.brms>
 
         <!-- other plugin versions -->
         <version.surefire.plugin>2.10</version.surefire.plugin>
