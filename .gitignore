@@ -12,3 +12,7 @@ MANIFEST.MF
 out
 *.log
 *.tlog
+
+# IntelliJ specific files/directories
+.idea
+*.iml
