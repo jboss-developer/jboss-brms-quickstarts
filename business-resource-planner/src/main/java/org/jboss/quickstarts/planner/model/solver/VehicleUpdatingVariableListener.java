@@ -19,10 +19,10 @@ package org.jboss.quickstarts.planner.model.solver;
 import org.jboss.quickstarts.planner.model.Customer;
 import org.jboss.quickstarts.planner.model.Standstill;
 import org.jboss.quickstarts.planner.model.Vehicle;
-import org.optaplanner.core.impl.domain.variable.listener.PlanningVariableListener;
+import org.optaplanner.core.impl.domain.variable.listener.VariableListener;
 import org.optaplanner.core.impl.score.director.ScoreDirector;
 
-public class VehicleUpdatingVariableListener implements PlanningVariableListener<Customer> {
+public class VehicleUpdatingVariableListener implements VariableListener<Customer> {
 
     public void beforeEntityAdded(ScoreDirector scoreDirector, Customer customer) {
         // Do nothing

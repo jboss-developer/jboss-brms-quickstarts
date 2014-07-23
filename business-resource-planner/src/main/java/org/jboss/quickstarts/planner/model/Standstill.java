@@ -17,7 +17,7 @@
 package org.jboss.quickstarts.planner.model;
 
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
-import org.optaplanner.core.api.domain.variable.PlanningVariable;
+import org.optaplanner.core.api.domain.variable.InverseRelationShadowVariable;
 
 @PlanningEntity
 public interface Standstill {
@@ -35,7 +35,7 @@ public interface Standstill {
     /**
      * @return sometimes null
      */
-    @PlanningVariable(mappedBy = "previousStandstill")
+    @InverseRelationShadowVariable(sourceVariableName = "previousStandstill")
     public Customer getNextCustomer();
 
     public void setNextCustomer(Customer nextCustomer);

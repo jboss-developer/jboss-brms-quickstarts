@@ -18,20 +18,19 @@
 <solver>
     <!-- What can Planner change? We need to make Planner aware of our domain classes -->
     <solutionClass>org.jboss.quickstarts.planner.model.VehicleRoutingSolution</solutionClass>
-    <planningEntityClass>org.jboss.quickstarts.planner.model.Customer</planningEntityClass>
-    <planningEntityClass>org.jboss.quickstarts.planner.model.Standstill</planningEntityClass>
+    <entityClass>org.jboss.quickstarts.planner.model.Standstill</entityClass>
+    <entityClass>org.jboss.quickstarts.planner.model.Customer</entityClass>
 
     <scoreDirectorFactory>
         <!-- How should Planner optimize the planning variables? Since we have hard and soft constraints, we use a HardSoftScore -->
         <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
         <!-- use the Drools rule engine as a score function -->
-        <scoreDrl>/rules/vehicleRoutingScoreRules.drl</scoreDrl>
+        <scoreDrl>rules/vehicleRoutingScoreRules.drl</scoreDrl>
     </scoreDirectorFactory>
 
     <!-- Configure the optimization algorithm(s) -->
     <termination>
-<!--         <maximumSecondsSpend>60</maximumSecondsSpend> -->
-        <maximumMinutesSpend>5</maximumMinutesSpend>
+        <minutesSpentLimit>5</minutesSpentLimit>
     </termination>
     <constructionHeuristic>
         <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
