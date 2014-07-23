@@ -70,7 +70,7 @@ public class RoutingController {
     }
 
     /**
-     * @param numberOfCustomer the numberOfCustomer to set
+     * @param numberOfCustomers the numberOfCustomer to set
      */
     public void setNumberOfCustomers(int numberOfCustomers) {
         this.numberOfCustomers = numberOfCustomers;
@@ -93,15 +93,14 @@ public class RoutingController {
         // shutdown any previous running solver
         solver.terminateEarly();
         // setup solver
-        VehicleRoutingSolution unsolvedSolution = createRoutingSolution();
+        final VehicleRoutingSolution unsolvedSolution = createRoutingSolution();
 
         try {
             validateDemandVsCapacity(unsolvedSolution);
             // run solver on a separated Thread
-            solver.setPlanningProblem(unsolvedSolution);
             solvingExecutor.submit(new Runnable() {
                 public void run() {
-                    solver.solve();
+                    solver.solve(unsolvedSolution);
                 }
             });
             facesContext.addMessage(null, new FacesMessage("Solving... Below is a temporary solution"));

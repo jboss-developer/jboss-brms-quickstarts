@@ -20,6 +20,7 @@ import org.jboss.quickstarts.planner.model.solver.VehicleUpdatingVariableListene
 import org.jboss.quickstarts.planner.model.solver.VrpCustomerDifficultyComparator;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
+import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
 
 @PlanningEntity(difficultyComparatorClass = VrpCustomerDifficultyComparator.class)
 public class Customer implements Standstill {
@@ -50,8 +51,8 @@ public class Customer implements Standstill {
         this.demand = demand;
     }
 
-    @PlanningVariable(chained = true, valueRangeProviderRefs = { "vehicleRange", "customerRange" },
-        variableListenerClasses = { VehicleUpdatingVariableListener.class })
+    @PlanningVariable(valueRangeProviderRefs = {"vehicleRange", "customerRange"},
+            graphType = PlanningVariableGraphType.CHAINED)
     public Standstill getPreviousStandstill() {
         return previousStandstill;
     }
