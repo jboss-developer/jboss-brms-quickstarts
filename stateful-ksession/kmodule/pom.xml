@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.jboss.quickstarts.brms</groupId>
         <artifactId>brms-stateful-ksession</artifactId>
-        <version>6.0.2.GA-redhat-5</version>
+        <version>6.0.2.GA-redhat-6</version>
     </parent>
     <artifactId>brms-stateful-ksession-kmodule</artifactId>
     <name>JBoss BRMS Quickstart: stateful-ksession - kmodule</name>

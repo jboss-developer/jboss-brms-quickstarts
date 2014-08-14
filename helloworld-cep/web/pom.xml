@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.jboss.quickstarts.brms</groupId>
         <artifactId>brms-helloworld-cep</artifactId>
-        <version>6.0.2.GA-redhat-5</version>
+        <version>6.0.2.GA-redhat-6</version>
     </parent>
     <artifactId>brms-helloworld-cep-web</artifactId>
     <packaging>war</packaging>
