@@ -56,18 +56,7 @@
         <module>store-brms</module>
         <module>tasks-bpmsuite</module>
         <module>business-resource-planner</module>
+        <module>dist</module>
     </modules>
 
-    <profiles>
-        <profile>
-            <activation>
-                <file>
-                    <exists>dist</exists>
-                </file>
-            </activation>
-            <modules>
-                <module>dist</module>
-            </modules>
-        </profile>
-    </profiles>
 </project>
