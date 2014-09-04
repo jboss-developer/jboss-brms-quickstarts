@@ -38,7 +38,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-        <version.jboss.bom.eap>6.2.0.GA</version.jboss.bom.eap>
+        <version.jboss.bom.eap>6.3.0.GA</version.jboss.bom.eap>
         <version.jboss.bom.brms>6.1.0.redhat-1</version.jboss.bom.brms>
 
         <maven.compiler.target>1.6</maven.compiler.target>
