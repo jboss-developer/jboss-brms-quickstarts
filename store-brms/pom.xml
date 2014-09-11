@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-store-brms</artifactId>
-    <version>6.0.2.GA-redhat-6</version>
+    <version>6.0.3.GA-redhat-1</version>
     <name>JBoss BRMS Quickstart: store-brms</name>
     <licenses>
         <license>
@@ -39,7 +39,7 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.jboss.bom>1.0.4.Final-redhat-9</version.jboss.bom>
-        <version.jboss.bom.brms>6.0.2.GA-redhat-6</version.jboss.bom.brms>
+        <version.jboss.bom.brms>6.0.3.GA-redhat-1</version.jboss.bom.brms>
 
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
