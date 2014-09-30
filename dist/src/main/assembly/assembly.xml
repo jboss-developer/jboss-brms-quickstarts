@@ -28,8 +28,6 @@
         <fileSet>
             <directory>../</directory>
             <excludes>
-                <exclude>**/dist</exclude>
-                <exclude>**/dist/**/*</exclude>
                 <exclude>**/target</exclude>
                 <exclude>**/target/**/*</exclude>
             </excludes>
