@@ -52,14 +52,14 @@
             <dependency>
                 <groupId>org.jboss.bom.eap</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${version.jboss.bom.eap}</version>
+                <version>${version.org.jboss.bom.eap}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom.brms</groupId>
                 <artifactId>jboss-javaee-6.0-with-drools</artifactId>
-                <version>${version.jboss.bom.brms}</version>
+                <version>${version.org.jboss.bom.brms}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
