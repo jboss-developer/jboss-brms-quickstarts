@@ -51,6 +51,8 @@
         <!-- Define the version of brms/bpmsuite core artifacts -->
         <version.org.jboss.bom.brms>6.1.0-SNAPSHOT</version.org.jboss.bom.brms>
         
+        <!-- Define the version of jboss-integration-platform 3rd party artifacts -->
+        <version.org.jboss.integration-platform>6.0.0.CR17</version.org.jboss.integration-platform>
 
         <!-- other plugin versions -->
         <version.surefire.plugin>2.10</version.surefire.plugin>

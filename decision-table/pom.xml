@@ -62,6 +62,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+              <groupId>org.jboss.integration-platform</groupId>
+              <artifactId>jboss-integration-platform-bom</artifactId>
+              <type>pom</type>
+              <version>${version.org.jboss.integration-platform}</version>
+              <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
