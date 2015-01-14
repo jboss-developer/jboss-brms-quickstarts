@@ -18,10 +18,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
-    <artifactId>brms-bpmsuite-quickstarts-dist</artifactId>
+    <artifactId>jboss-brms-bpmsuite-quickstarts-dist</artifactId>
     <version>6.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>JBoss BRMS Quickstart: dist</name>
+    <name>JBoss BRMS/BPM Suite Quickstarts :: Distribution</name>
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
     <licenses>
         <license>
@@ -50,7 +50,7 @@
                         </goals>
                         <configuration>
                             <appendAssemblyId>false</appendAssemblyId>
-                            <finalName>jboss-brms-quickstarts</finalName>
+                            <finalName>jboss-brms-bpmsuite-quickstarts</finalName>
                             <descriptors>
                                 <descriptor>${basedir}/src/main/assembly/assembly.xml</descriptor>
                             </descriptors>
