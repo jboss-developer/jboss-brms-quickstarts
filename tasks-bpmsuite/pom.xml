@@ -26,7 +26,7 @@
     </parent>
 
     <artifactId>brms-tasks-bpmsuite</artifactId>
-    <name>JBoss BPM-SUITE Quickstart: tasks-bpmsuite</name>
+    <name>JBoss BPM Suite Quickstart: tasks-bpmsuite</name>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
