@@ -58,7 +58,7 @@
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom.brms</groupId>
-                <artifactId>jboss-javaee-6.0-with-drools</artifactId>
+                <artifactId>jboss-javaee-6.0-with-brms-bpmsuite</artifactId>
                 <version>${version.org.jboss.bom.brms}</version>
                 <type>pom</type>
                 <scope>import</scope>
