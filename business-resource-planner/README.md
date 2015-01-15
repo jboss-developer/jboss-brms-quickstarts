@@ -4,7 +4,7 @@ Author: Geoffrey De Smet, adapted by Rafael Benevides
 Level: Advanced  
 Technologies: BRMS, Drools, Optaplanner  
 Summary: This Quickstarts shows how to solve a vehicle routing problem  
-Target Product: BPM Suite
+Target Product: BRMS
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
 
