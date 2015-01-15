@@ -20,15 +20,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
       <groupId>org.jboss.quickstarts.brms</groupId>
-      <artifactId>brms-quickstart-parent</artifactId>
+      <artifactId>jboss-brms-bpmsuite-quickstarts-parent</artifactId>
       <version>6.1.0-SNAPSHOT</version>
       <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-helloworld-bpmsuite</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
-    <name>JBoss BPM-SUITE Quickstart: helloworld-bpmsuite</name>
+    <name>JBoss BPM Suite Quickstart: helloworld-bpmsuite</name>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -56,7 +54,7 @@
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom.brms</groupId>
-                <artifactId>jboss-javaee-6.0-with-drools</artifactId>
+                <artifactId>jboss-javaee-6.0-with-brms-bpmsuite</artifactId>
                 <version>${version.org.jboss.bom.brms}</version>
                 <type>pom</type>
                 <scope>import</scope>

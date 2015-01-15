@@ -24,10 +24,10 @@
         <relativePath/>
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
-    <artifactId>brms-quickstart-parent</artifactId>
+    <artifactId>jboss-brms-bpmsuite-quickstarts-parent</artifactId>
     <version>6.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>JBoss BRMS Quickstart: jboss-brms-quickstarts</name>
+    <name>JBoss BRMS/BPM Suite Quickstarts Parent</name>
     <description>JBoss BRMS Quickstarts Parent</description>
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
     <licenses>

@@ -4,7 +4,7 @@ Author: Rafael Benevides
 Level: Beginner  
 Technologies: Drools, BRMS    
 Summary: Shows how to run a Process that was defined on a JBoss BPM Suite server  
-Target Product: BPM-SUITE  
+Target Product: BPM Suite
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 
 What is it?
