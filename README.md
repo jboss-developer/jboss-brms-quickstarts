@@ -38,9 +38,9 @@ Configure BRMS
 
 2. Run the installer with: java -jar `jboss-brms-installer-6.1.0.GA-redhat-<version>.jar`
  
-   The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.1.1/` directory. 
+   The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
    
-   _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.1.1/` directory.
+   _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.4/` directory.
 
 3. Add an application user
 
@@ -62,9 +62,9 @@ Configure BPM Suite
 
 2. Run the installer with: java -jar `jboss-brms-installer-6.1.0.GA-redhat-<version>.jar`
  
-   The BPM Suite installation is also now located the `ROOT_DIR/jboss-eap-6.3/` directory. 
+   The BPM Suite installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
    
-   _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.3/` directory.
+   _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.4/` directory.
 
 3. Add an application user
 
@@ -84,7 +84,7 @@ Start the JBoss BRMS or BPM Suite Server
 Import the BRMS Repository
 --------------------------
 
-1. Make sure you have started the JBoss EAP Server as decribed above.
+1. Make sure you have started the JBoss EAP Server as described above.
  
 2. Navigate to <http://localhost:8080/business-central> in a web browser. 
 
