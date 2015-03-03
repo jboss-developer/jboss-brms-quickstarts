@@ -3,7 +3,7 @@ tasks-bpmsuite: A BPM Suite example with User Tasks
 Author: Rafael Benevides  
 Level: Advanced  
 Technologies: BPMS  
-Summary: Shows how to run a Process with user tasks that was defined on a JBoss BPM Suite server  
+Summary: The `tasks-bpmsuite` quickstart shows how to run a Process with user tasks that was defined on a JBoss BPM Suite server.
 Target Product: BPM Suite
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 

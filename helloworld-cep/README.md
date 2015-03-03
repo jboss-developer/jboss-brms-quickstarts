@@ -3,15 +3,14 @@ helloworld-cep: A Complex Event Processing Hello World
 Author: Rafael Benevides  
 Level: Intermediate  
 Technologies: CDI, JSF, Drools  
-Summary: This Quickstart shows a basic example for CEP  
+Summary: The `helloworld-cep` quickstart shows a basic example for CEP  
 Target Product: BRMS  
-Product Versions: EAP 6.1, EAP 6.2  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts>  
 
 What is it?
 -----------
 
-This project demonstrates a basic example of CEP - Complex Event Processing. Each financial transaction, for example `Credit Card`, `Deposit` or `Withdrawal`, is an event that occurs on the user account.
+The `helloworld-cep` quickstarts demonstrates a basic example of CEP - Complex Event Processing. Each financial transaction, for example `Credit Card`, `Deposit` or `Withdrawal`, is an event that occurs on the user account.
 
 For demonstration purposes, 3 rules are defined to evaluate and detect the following fraudulent transactions:
 

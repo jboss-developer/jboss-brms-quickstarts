@@ -3,7 +3,7 @@ business-resource-planner: Shows how to solve a vehicle routing problem
 Author: Geoffrey De Smet, adapted by Rafael Benevides   
 Level: Advanced  
 Technologies: BRMS, Drools, Optaplanner  
-Summary: This Quickstarts shows how to solve a vehicle routing problem  
+Summary: This `business-resource-planner` quickstarts shows how to solve a vehicle routing problem. 
 Target Product: BRMS
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 

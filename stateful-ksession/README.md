@@ -3,14 +3,14 @@ stateful-ksession: Stateful Kie Session Quickstart
 Author: Rafael Benevides  
 Level: Intermediate  
 Technologies: CDI, JSF, Drools  
-Summary: This Quickstart shows how to use Stateful Kie Session  
+Summary: The `stateful-ksession` quickstart shows how to use Stateful Kie Session  
 Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts>  
 
 What is it?
 -----------
 
-This projects demonstrates the use of Drools Stateful KIE session. Stateful KIE sessions are longer lived and allow iterative changes over time.
+The `stateful-ksession` project demonstrates the use of Drools Stateful KIE session. Stateful KIE sessions are longer lived and allow iterative changes over time.
 
 In this use case we see a 'House' with a fire alarm. The house contains 'Rooms' with fire 'Sprinklers' in each room.
 

@@ -3,7 +3,7 @@ helloworld-drl: BRMS Basic DRL example
 Author: Rafael Benevides  
 Level: Beginner  
 Technologies: Drools  
-Summary: Shows how to use Drools 6  
+Summary: The `helloworld-drl` quickstart shows how to use Drools 6  
 Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 

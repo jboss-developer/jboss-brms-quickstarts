@@ -3,7 +3,7 @@ store-brms: A Store BRMS example
 Author: Rafael Benevides  
 Level: Advanced  
 Technologies: Drools, BRMS    
-Summary: Shows how to use a KModule from a BRMS server with functions, globals and DSL    
+Summary: The `store-brms` quickstart shows how to use a KModule from a BRMS server with functions, globals and DSL
 Target Product: BRMS  
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
 

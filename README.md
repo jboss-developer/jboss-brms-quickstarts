@@ -1,9 +1,8 @@
-jboss-brms-quickstarts: BRMS Quickstarts
+Red Hat JBoss BRMS & BPM Suite Quickstarts
 ========================================
-Target Product: BRMS  
+Target Product: JBoss BRMS & BPM Suite 
 Source: <https://github.com/jboss-developer/jboss-brms-quickstarts/>  
-
-Summary: These quickstarts demonstrate how to use BRMS and BPM to manage and deploy business process and rules. They provide small, specific, working examples that can be used as a reference for your own project.  
+Summary:These quickstarts demonstrate how to use BRMS and BPM to manage and deploy business process and rules.
 
 *Red Hat JBoss BRMS* is an open source decision management platform that combines Business Rules Management and Complex Event Processing. It automates business decisions and makes that logic available to the entire business. 
 
