@@ -25,17 +25,17 @@ The root folder of each individual quickstart contains a README file with specif
 Configure BRMS
 --------------
 
-1. Download BRMS 6.1.0 from the Customer Portal or from JBoss.org
+1. Download BRMS 6.2.0 from the Customer Portal or from JBoss.org
     * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
     * Select `BRMS` from the Business Automation Platforms product list.
-    * Find `Red Hat JBoss BRMS 6.1.0 Installer` in the file list and click `Download`.
-    * This downloads the BRMS 6.1.0 Installer to a directory of your choice.
+    * Find `Red Hat JBoss BRMS 6.2.0 Installer` in the file list and click `Download`.
+    * This downloads the BRMS 6.2.0 Installer to a directory of your choice.
 
     * Visit the BRMS page at <https://www.jboss.org/products/brms.html>/
-    * Select `Download JBoss BRMS 6.1.0`, login or create an account, and agree to the download terms and conditions.
-    * This downloads the BRMS 6.1.0 Installer to a directory of your choice.
+    * Select `Download JBoss BRMS 6.2.0`, login or create an account, and agree to the download terms and conditions.
+    * This downloads the BRMS 6.2.0 Installer to a directory of your choice.
 
-2. Run the installer with: java -jar `jboss-brms-installer-6.1.0.GA-redhat-<version>.jar`
+2. Run the installer with: java -jar `jboss-brms-installer-6.2.0.GA-redhat-<version>.jar`
  
    The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
    
@@ -49,17 +49,17 @@ Configure BRMS
 Configure BPM Suite
 -------------------
 
-1. Download BPM Suite 6.1.0 from the Customer Portal or from JBoss.org
+1. Download BPM Suite 6.2.0 from the Customer Portal or from JBoss.org
     * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
     * Select `BPM Suite` from the Business Automation Platforms product list.
-    * Find `Red Hat JBoss BPM Suite 6.1.0 Installer` in the file list and click `Download`.
-    * This downloads the BPM Suite 6.1.0 Installer to a directory of your choice.
+    * Find `Red Hat JBoss BPM Suite 6.2.0 Installer` in the file list and click `Download`.
+    * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
 
     * Visit the BPM Suite page at <https://www.jboss.org/products/bpmsuite.html>/
-    * Select `Download JBoss BPM Suite 6.1.0`, login or create an account, and agree to the download terms and conditions.
-    * This downloads the BPM Suite 6.1.0 Installer to a directory of your choice.
+    * Select `Download JBoss BPM Suite 6.2.0`, login or create an account, and agree to the download terms and conditions.
+    * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
 
-2. Run the installer with: java -jar `jboss-brms-installer-6.1.0.GA-redhat-<version>.jar`
+2. Run the installer with: java -jar `jboss-brms-installer-6.2.0.GA-redhat-<version>.jar`
  
    The BPM Suite installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
    
