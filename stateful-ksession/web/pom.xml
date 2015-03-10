@@ -20,7 +20,7 @@
     <parent>
         <groupId>org.jboss.quickstarts.brms</groupId>
         <artifactId>brms-stateful-ksession</artifactId>
-        <version>6.1.0-SNAPSHOT</version>
+        <version>6.2.0-SNAPSHOT</version>
     </parent>
     <artifactId>brms-stateful-ksession-web</artifactId>
     <packaging>war</packaging>

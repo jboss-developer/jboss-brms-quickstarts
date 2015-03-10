@@ -25,7 +25,7 @@
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>jboss-brms-bpmsuite-quickstarts-parent</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
+    <version>6.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS/BPM Suite Quickstarts Parent</name>
     <description>JBoss BRMS Quickstarts Parent</description>
@@ -49,7 +49,7 @@
         <version.org.jboss.bom.eap>6.3.2.GA</version.org.jboss.bom.eap>
 
         <!-- Define the version of brms/bpmsuite core artifacts -->
-        <version.org.jboss.bom.brms>6.1.0-SNAPSHOT</version.org.jboss.bom.brms>
+        <version.org.jboss.bom.brms>6.2.0-SNAPSHOT</version.org.jboss.bom.brms>
         
         <!-- Define the version of jboss-integration-platform 3rd party artifacts -->
         <version.org.jboss.integration-platform>6.0.0.CR25</version.org.jboss.integration-platform>
