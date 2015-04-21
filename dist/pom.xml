@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>jboss-brms-bpmsuite-quickstarts-dist</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
+    <version>6.1.0.GA-redhat-2</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS/BPM Suite Quickstarts :: Distribution</name>
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
@@ -33,6 +33,16 @@
 
     <properties>
         <version.assembly.plugin>2.4</version.assembly.plugin>
+        <version.org.mvel>2.2.4.Final-redhat-1</version.org.mvel>
+        <version.org.kie>6.2.0.Final-redhat-4</version.org.kie>
+        <version.org.uberfire>0.5.3.Final-redhat-1</version.org.uberfire>
+        <version.org.jboss.as>7.5.0.Final-redhat-21</version.org.jboss.as>
+        <version.org.kie.workbench.app>6.1.0.GA</version.org.kie.workbench.app>
+        <version.org.jboss.bom.brms>6.1.0.GA-redhat-2</version.org.jboss.bom.brms>
+        <version.org.uberfire.ext>0.5.3.Final-redhat-1</version.org.uberfire.ext>
+        <version.org.dashbuilder>0.2.2.Final-redhat-1</version.org.dashbuilder>
+        <version.org.jboss.errai>3.0.4.Final-redhat-4</version.org.jboss.errai>
+        <version.org.jboss.integration-platform>6.0.0.CR26-redhat-2</version.org.jboss.integration-platform>
     </properties>
 
     <build>
@@ -60,4 +70,8 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencyManagement></dependencyManagement>
 </project>
+<!-- Modified by POM Manipulation Extension for Maven 1.3 ( SHA: 7377f108 ) -->
+

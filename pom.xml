@@ -21,11 +21,11 @@
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
         <version>11</version>
-        <relativePath/>
+        <relativePath></relativePath>
     </parent>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>jboss-brms-bpmsuite-quickstarts-parent</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
+    <version>6.1.0.GA-redhat-2</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS/BPM Suite Quickstarts Parent</name>
     <description>JBoss BRMS Quickstarts Parent</description>
@@ -47,28 +47,32 @@
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
         <version.org.jboss.bom.eap>6.4.0.GA</version.org.jboss.bom.eap>
+        <version.org.uberfire.ext>0.5.3.Final-redhat-1</version.org.uberfire.ext>
 
         <!-- Define the version of brms/bpmsuite core artifacts -->
-        <version.org.jboss.bom.brms>6.1.0-SNAPSHOT</version.org.jboss.bom.brms>
+        <version.org.jboss.bom.brms>6.1.0.GA-redhat-2</version.org.jboss.bom.brms>
         
         <!-- Define the version of jboss-integration-platform 3rd party artifacts -->
-        <version.org.jboss.integration-platform>6.0.0.CR25</version.org.jboss.integration-platform>
+        <version.org.jboss.integration-platform>6.0.0.CR26-redhat-2</version.org.jboss.integration-platform>
+        <version.org.mvel>2.2.4.Final-redhat-1</version.org.mvel>
 
         <!-- other plugin versions -->
         <version.surefire.plugin>2.10</version.surefire.plugin>
+        <version.org.kie.workbench.app>6.1.0.GA</version.org.kie.workbench.app>
         <version.war.plugin>2.4</version.war.plugin>
+        <version.org.jboss.as>7.5.0.Final-redhat-21</version.org.jboss.as>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
+        <version.org.kie>6.2.0.Final-redhat-4</version.org.kie>
 
         <!-- Repository Deployment URLs -->
-        <jboss.releases.repo.url>
-            https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
-        </jboss.releases.repo.url>
-        <jboss.snapshots.repo.url>
-            https://repository.jboss.org/nexus/content/repositories/snapshots/
-        </jboss.snapshots.repo.url>
+        <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
+        <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</jboss.snapshots.repo.url>
+        <version.org.uberfire>0.5.3.Final-redhat-1</version.org.uberfire>
+        <version.org.jboss.errai>3.0.4.Final-redhat-4</version.org.jboss.errai>
+        <version.org.dashbuilder>0.2.2.Final-redhat-1</version.org.dashbuilder>
     </properties>
     <modules>
         <module>decision-table</module>
@@ -82,20 +86,6 @@
         <module>business-resource-planner</module>
         <module>dist</module>
     </modules>
-
-    <repositories>
-        <!-- Bootstrap repository to locate the parent pom when the parent pom has not been build locally. -->
-        <repository>
-            <id>jboss-public-repository-group</id>
-            <name>JBoss Public Repository Group</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
-        </repository>
-        <!-- Product repository with productized (not only) EAP artifacts -->
-        <repository>
-            <id>Red Hat Product Repository</id>
-            <url>https://maven.repository.redhat.com/techpreview/all/</url>
-        </repository>
-    </repositories>
     <distributionManagement>
         <repository>
             <id>jboss-releases-repository</id>
@@ -108,5 +98,56 @@
             <url>${jboss.snapshots.repo.url}</url>
         </snapshotRepository>
     </distributionManagement>
+    <dependencyManagement></dependencyManagement>
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.commonjava.maven.plugins</groupId>
+        <artifactId>project-sources-maven-plugin</artifactId>
+        <version>0.3</version>
+        <executions>
+          <execution>
+            <id>project-sources-archive</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>archive</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.redhat.rcm.maven.plugin</groupId>
+        <artifactId>buildmetadata-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <executions>
+          <execution>
+            <id>build-metadata</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>provide-buildmetadata</goal>
+            </goals>
+            <configuration>
+              <validateCheckout>false</validateCheckout>
+              <hideJavaOptsInfo>false</hideJavaOptsInfo>
+              <activateOutputFileMapping>false</activateOutputFileMapping>
+              <createXmlReport>false</createXmlReport>
+              <hideCommandLineInfo>false</hideCommandLineInfo>
+              <propertiesOutputFile>${basedir}/build.metadata</propertiesOutputFile>
+              <createPropertiesReport>true</createPropertiesReport>
+              <addMavenExecutionInfo>true</addMavenExecutionInfo>
+              <addLocallyModifiedTagToFullVersion>false</addLocallyModifiedTagToFullVersion>
+              <addJavaRuntimeInfo>true</addJavaRuntimeInfo>
+              <hideMavenOptsInfo>false</hideMavenOptsInfo>
+              <forceNewProperties>true</forceNewProperties>
+              <addToGeneratedSources>false</addToGeneratedSources>
+            </configuration>
+          </execution>
+        </executions>
+        <inherited>false</inherited>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
+<!-- Modified by POM Manipulation Extension for Maven 1.3 ( SHA: 7377f108 ) -->
+
