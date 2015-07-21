@@ -46,7 +46,7 @@
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
 
         <!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
-        <version.org.jboss.bom.eap>6.3.2.GA</version.org.jboss.bom.eap>
+        <version.org.jboss.bom.eap>6.4.2.GA</version.org.jboss.bom.eap>
 
         <!-- Define the version of brms/bpmsuite core artifacts -->
         <version.org.jboss.bom.brms>6.2.0-SNAPSHOT</version.org.jboss.bom.brms>
