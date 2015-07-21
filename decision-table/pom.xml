@@ -55,17 +55,10 @@
             </dependency>
             <dependency>
                 <groupId>org.jboss.bom.brms</groupId>
-                <artifactId>jboss-javaee-6.0-with-brms-bpmsuite</artifactId>
-                <version>${version.org.jboss.bom.brms}</version>
+                <artifactId>jboss-brms-bpmsuite-platform-bom</artifactId>
                 <type>pom</type>
+                <version>${version.org.jboss.bom.brms}</version>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-              <groupId>org.jboss.integration-platform</groupId>
-              <artifactId>jboss-integration-platform-bom</artifactId>
-              <type>pom</type>
-              <version>${version.org.jboss.integration-platform}</version>
-              <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
