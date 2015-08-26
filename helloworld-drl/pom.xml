@@ -17,16 +17,11 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-      <groupId>org.jboss.quickstarts.brms</groupId>
-      <artifactId>jboss-brms-bpmsuite-quickstarts-parent</artifactId>
-      <version>6.2.0-SNAPSHOT</version>
-      <relativePath>../pom.xml</relativePath>
-    </parent>
-
+    <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-helloworld-drl</artifactId>
+    <version>6.2.0-SNAPSHOT</version>
+
     <name>JBoss BRMS Quickstart: helloworld-drl</name>
     <licenses>
         <license>
@@ -36,28 +31,14 @@
         </license>
     </licenses>
 
+    <properties>
+        <version.org.jboss.bom.brms>6.2.0-SNAPSHOT</version.org.jboss.bom.brms>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
-        <!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill
-                of Materials (BOM). A BOM specifies the versions of a "stack" (or a collection)
-                of artifacts. We use this here so that we always get the correct versions
-                of artifacts. Here we use the jboss-javaee-6.0-with tools stack (you can read this as
-                the JBoss stack of the Java EE 6 APIs, with some extras tools for your project, such
-                as Arquillian for testing) -->
-            <dependency>
-                <groupId>org.jboss.bom.eap</groupId>
-                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
-                <version>${version.org.jboss.bom.eap}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.bom.brms</groupId>
-                <artifactId>jboss-javaee-6.0-with-brms-bpmsuite</artifactId>
-                <version>${version.org.jboss.bom.brms}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+            <!-- The BRMS and BPM Suite platform BOM defines versions for all supported product artifacts
+                 + all dependant (transitive) 3rd party dependencies as well. -->
             <dependency>
                 <groupId>org.jboss.bom.brms</groupId>
                 <artifactId>jboss-brms-bpmsuite-platform-bom</artifactId>
@@ -65,7 +46,6 @@
                 <version>${version.org.jboss.bom.brms}</version>
                 <scope>import</scope>
             </dependency>
-            
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -98,4 +78,12 @@
         <finalName>${project.artifactId}</finalName>
     </build>
 
+    <repositories>
+        <!-- Maven repository with productized JBoss artifacts -->
+        <repository>
+            <id>redhat-product-repo</id>
+            <name>Red Hat Product Repository</name>
+            <url>https://maven.repository.redhat.com/ga</url>
+        </repository>
+    </repositories>
 </project>
