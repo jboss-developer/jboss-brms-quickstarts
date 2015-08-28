@@ -14,7 +14,7 @@ This project demonstrates how to use BRMS to deploy modules that contain model c
 
 The `DriverProfile`, `CarProfile` and `PriceQuotation` classes are defined in a BRMS Kmodule that is added to the project with the following dependency: `org.jboss.quickstarts.brms:decision-table:1.0.0`. It is available in this git repository: <https://github.com/jboss-developer/jboss-brms-repository.git>. This module imports the Decision Table rules.
 
-The rules for this BRMS quickstart are defined in the `rules.xsl` spreadsheet, which is located in the root folder of this quickstart. You import these rules into the BRMS server during the deployment process below.
+The rules for this BRMS quickstart are defined in the `insurance-rules.xls` spreadsheet, which is located in `jboss-brms-bpmsuite-repository` git repository. 
 
 The `DecisionTableTest` class tests each rule defined in the Decision Table.
 
