@@ -71,20 +71,12 @@ Deploy BRMS kmodule
         Repository Name:      jboss-brms-repository
         BRMS Kmodule:         decision-table-kmodule
 
-6. Choose menu option `New Item` -> `Decision Table (Spreadsheet)`
+6. Click on `Open Project Editor`
 
-7. On `Create new Decision Table (Spreadsheet)` dialog, enter the following:
-   * For `Resource Name`, type `insurance-rules`. 
-   * Click on `Choose File` button, and select the `rules.xsl` file that is located root directory of this quickstart.
-   
-     _Note:_ The file path will display `C:\fakepath\rules.xls`, but you can ignore that. Click `OK`.
-   * It will prompt you with a message: "Uploaded successfully". Click `OK`.
-8. Next, click on `Tools` and `Project Editor`
-
-9. In the tab on the right, click on `Build & Deploy`. 
+7. In the tab on the right, click on `Build` -> `Build & Deploy`. 
    * It will prompt you with a message: "Also save possible changes to project?". Click `Yes`. 
    * You are prompted for a comment. Add a comment and click on `Save` button.
-   This deploys the `org.jboss.quickstarts.brms:decision-table-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
+   This installs the `org.jboss.quickstarts.brms:decision-table-kmodule:1.0.0` artifact to the BRMS Maven repository. You can verify the deployment choosing menu option `Deployment` --> `Artifact Repository`.
 
 
 Run the Tests 
@@ -111,7 +103,7 @@ Run the Tests
 
         mvn clean test -Penable-test,brms
 
-  The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:my-store-brms-kmodule:1.0.0` as a project dependency. 
+  The `brms` profile enables the `http://localhost:8080/business-central/maven2/` repository and adds the `org.jboss.quickstarts.brms:decision-table-kmodule:1.0.0` as a project dependency. 
 
   Now the tests complete successfully.
 
