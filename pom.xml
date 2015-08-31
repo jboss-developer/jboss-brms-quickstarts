@@ -42,19 +42,6 @@
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- JBoss dependency versions -->
-        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
-
-        <!-- Define the version of the JBoss EAP BOM we want to import to specify tested stacks. -->
-        <version.org.jboss.bom.eap>6.4.2.GA</version.org.jboss.bom.eap>
-
-        <!-- Define the version of BRMS/BPM Suite BOMs we want to import -->
-        <version.org.jboss.bom.brms>6.2.0-SNAPSHOT</version.org.jboss.bom.brms>
-        
-        <!-- other plugin versions -->
-        <version.surefire.plugin>2.10</version.surefire.plugin>
-        <version.war.plugin>2.4</version.war.plugin>
-
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
