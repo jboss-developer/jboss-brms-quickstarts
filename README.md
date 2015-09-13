@@ -12,6 +12,8 @@ Both BRMS and BPM Suite use a centralized repository where all resources are sto
 
 The root folder of each individual quickstart contains a README file with specific details on how to configure the environment and how build and run the example. In some most cases you need to configure either BRMS or BPM and import the BRMS repository.
 
+* [Configure EAP] (#configure-eap): Download and configure Red Hat JBoss EAP.
+
 * [Configure BRMS](#configure-brms): Download and configure Red Hat JBoss BRMS.
 
 * [Configure BPM Suite](#configure-bpm-suite): Download and configure Red Hat JBoss BPM Suite.
@@ -20,52 +22,89 @@ The root folder of each individual quickstart contains a README file with specif
 
 * [Import the BRMS Repository](#import-the-brms-repository): Import the BRMS repository containing the rules and resources used by the quickstarts.
 
+Download and configure EAP
+--------------------------
+JBoss BRMS and BPM Suite need installation of JBoss EAP (or other supported container). Following steps will guide you
+through the process of downloading and installing EAP. If you already have JBoss EAP installed, you can skip this section.
 
+1. Download EAP installer
+    * Option 1
+        * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>.
+        * Select `Enterprise Application Platform` from the product list.
+        * Make sure the selected version is 6.4.
+        * Find `Red Hat JBoss Enterprise Application Platform 6.4.0 Installer` in the file list and click `Download`.
+        * This downloads the JBoss EAP 6.4 Installer to a directory of your choice.
+    * Option 2
+        * Visit the JBoss EAP page at <https://www.jboss.org/products/eap.html>.
+        * Select `Download JBoss EAP`, login or create an account, and agree to the download terms and conditions.
+        * Click on `Installer` for version 6.4.0.GA.
+        * This downloads the JBoss EAP 6.4 Installer to a directory of your choice.
+    
+2. Run the installer with: `java -jar jboss-eap-6.4.0-installer.jar`. Click through the UI and install the EAP into
+directory of your choice.
+
+_Note:_: These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.4/` directory where the EAP was installed.
+    
+Please refer to [JBoss EAP Installation Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html/Installation_Guide/index.html)
+for more details about the installation process and other installation options (for example installing from zip file).
 
 Configure BRMS
 --------------
+1. [Optional] Download and install JBoss EAP 6.4 (Enterprise Application Platform) from the customer portal or from JBoss.org.
+See [Download and configure EAP](#download-and-configure-eap) for details on how to install EAP.
+If you already have JBoss EAP installed, you can go directly to step 2.
 
-1. Download BRMS 6.2.0 from the Customer Portal or from JBoss.org
-    * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
-    * Select `BRMS` from the Business Automation Platforms product list.
-    * Find `Red Hat JBoss BRMS 6.2.0 Installer` in the file list and click `Download`.
-    * This downloads the BRMS 6.2.0 Installer to a directory of your choice.
+2. Download JBoss BRMS 6.2.0 from the Customer Portal or from JBoss.org
+    * Option 1
+        * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>
+        * Select `BRMS` from the product list.
+        * Find `Red Hat JBoss BRMS 6.2.0 Installer` in the file list and click `Download`.
+        * This downloads the BRMS 6.2.0 Installer to a directory of your choice.
+    * Option 2
+        * Visit the JBoss BRMS page at <https://www.jboss.org/products/brms.html>
+        * Select `Download JBoss BRMS`, login or create an account, and agree to the download terms and conditions.
+        * Click on `Installer` for version 6.2.0.GA.
+        * This downloads the JBoss BRMS 6.2.0 Installer to a directory of your choice.
 
-    * Visit the BRMS page at <https://www.jboss.org/products/brms.html>/
-    * Select `Download JBoss BRMS 6.2.0`, login or create an account, and agree to the download terms and conditions.
-    * This downloads the BRMS 6.2.0 Installer to a directory of your choice.
-
-2. Run the installer with: java -jar `jboss-brms-installer-6.2.0.GA-redhat-<version>.jar`
+3. Run the installer with: `java -jar jboss-brms-6.2.0.GA-installer.jar`. Click through the UI and point the installer
+to your local EAP installation.
  
-   The BRMS installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
+   The JBoss BRMS installation is also now located under the `ROOT_DIR/jboss-eap-6.4/` directory.
    
    _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.4/` directory.
 
-3. Add an application user
+4. Add an application user
 
         For Linux:   EAP_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
         For Windows: EAP_HOME\bin\add-user.bat  -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
     
 Configure BPM Suite
 -------------------
+1. [Optional] Download and install JBoss EAP 6.4 (Enterprise Application Platform) from the customer portal or from JBoss.org.
+See [Download and configure EAP](#download-and-configure-eap) for details on how to install EAP.
+If you already have JBoss EAP installation available, you can go directly to step 2.
 
-1. Download BPM Suite 6.2.0 from the Customer Portal or from JBoss.org
-    * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
-    * Select `BPM Suite` from the Business Automation Platforms product list.
-    * Find `Red Hat JBoss BPM Suite 6.2.0 Installer` in the file list and click `Download`.
-    * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
+2. Download BPM Suite 6.2.0 from the Customer Portal or from JBoss.org
+    * Option 1
+        * Login to the Customer Portal at <https://access.redhat.com/jbossnetwork/restricted/listSoftware.html>/
+        * Select `BPM Suite` from the Business Automation Platforms product list.
+        * Find `Red Hat JBoss BPM Suite 6.2.0 Installer` in the file list and click `Download`.
+        * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
 
-    * Visit the BPM Suite page at <https://www.jboss.org/products/bpmsuite.html>/
-    * Select `Download JBoss BPM Suite 6.2.0`, login or create an account, and agree to the download terms and conditions.
-    * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
+    * Option 2
+        * Visit the BPM Suite page at <https://www.jboss.org/products/bpmsuite.html>/
+        * Select `Download JBoss BPM Suite`, login or create an account, and agree to the download terms and conditions.
+        * Click on `Installer` for version 6.2.0.GA.
+        * This downloads the BPM Suite 6.2.0 Installer to a directory of your choice.
 
-2. Run the installer with: java -jar `jboss-brms-installer-6.2.0.GA-redhat-<version>.jar`
+3. Run the installer with: `java -jar jboss-bpmsuite-6.2.0.GA-installer.jar`. Click through the UI and point the installer
+to your local EAP installation.
  
    The BPM Suite installation is also now located the `ROOT_DIR/jboss-eap-6.4/` directory.
    
    _Note:_ These instructions use `EAP_HOME` to refer to the `ROOT_DIR/jboss-eap-6.4/` directory.
 
-3. Add an application user
+4. Add an application user
 
          For Linux:   EAP_HOME/bin/add-user.sh -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
          For Windows: EAP_HOME\bin\add-user.bat  -a -u 'quickstartUser' -p 'quickstartPwd1!' -ro 'admin,analyst'
@@ -108,5 +147,3 @@ Import the BRMS Repository
          Password:             <leave blank>
 
 7. Click the `Clone` button to create the repository. You see the message "The repository is cloned successfully".
-
-
