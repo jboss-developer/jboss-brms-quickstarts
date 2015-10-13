@@ -48,26 +48,25 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- BRMS and BPM Suite BOM defines versions for all supported product artifacts. -->
+            <!-- Note: brms-bpmsuite-platfrom-bom is not used because it brings different versions of Arquillian, Maven
+                 and other dependencies, which results in failures during ARQ test execution. -->
+            <dependency>
+                <groupId>org.jboss.bom.brms</groupId>
+                <artifactId>jboss-brms-bpmsuite-bom</artifactId>
+                <type>pom</type>
+                <version>${version.org.jboss.bom.brms}</version>
+                <scope>import</scope>
+            </dependency>
             <!-- JBoss distributes a complete set of Java EE 6 APIs including a Bill of Materials (BOM). A BOM specifies the versions
                 of a "stack" (or a collection) of artifacts. We use this here so that we always get the correct versions of artifacts.
-                Here we use
-                the jboss-javaee-6.0-with-tools stack (you can read this as the JBoss stack of the Java EE 6 APIs, with some extras
-                tools for your
-                project, such as Arquillian for testing) -->
+                Here we use the jboss-javaee-6.0-with-tools stack (you can read this as the JBoss stack of the Java EE 6 APIs, with some extras
+                tools for your project, such as Arquillian for testing) -->
             <dependency>
                 <groupId>org.jboss.bom.eap</groupId>
                 <artifactId>jboss-javaee-6.0-with-tools</artifactId>
                 <version>${version.org.jboss.bom.eap}</version>
                 <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- The BRMS and BPM Suite platform BOM defines versions for all supported product artifacts
-                 + all dependant (transitive) 3rd party dependencies as well. -->
-            <dependency>
-                <groupId>org.jboss.bom.brms</groupId>
-                <artifactId>jboss-brms-bpmsuite-platform-bom</artifactId>
-                <type>pom</type>
-                <version>${version.org.jboss.bom.brms}</version>
                 <scope>import</scope>
             </dependency>
         </dependencies>
