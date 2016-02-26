@@ -38,6 +38,8 @@
         <version.war.plugin>2.4</version.war.plugin>
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+        <!--This is for defining jboss.as.arquillian version used in web module which only have 7.2.0.Final in community-->
+        <version.org.jboss.as>7.2.Final</version.org.jboss.as>
     </properties>
 
     <modules>
