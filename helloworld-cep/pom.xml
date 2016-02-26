@@ -38,8 +38,8 @@
         <version.war.plugin>2.4</version.war.plugin>
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
-        <!--This is for defining jboss.as.arquillian version used in web module which only have 7.2.0.Final in community-->
-        <version.org.jboss.as>7.2.Final</version.org.jboss.as>
+        <!--This is for defining jboss.as.arquillian version used in web module-->
+        <version.org.jboss.as>7.2.0.Final</version.org.jboss.as>
     </properties>
 
     <modules>
@@ -48,6 +48,17 @@
     </modules>
     <dependencyManagement>
         <dependencies>
+            <!--jboss-as-arquillian dependencies are used in web model for test purpose-->
+            <dependency>
+               <groupId>org.jboss.as</groupId>
+               <artifactId>jboss-as-arquillian-container-managed</artifactId>
+               <version>${version.org.jboss.as}</version>
+            </dependency>
+            <dependency>
+               <groupId>org.jboss.as</groupId>
+               <artifactId>jboss-as-arquillian-container-remote</artifactId>
+               <version>${version.org.jboss.as}</version>
+            </dependency>
             <!-- BRMS and BPM Suite BOM defines versions for all supported product artifacts. -->
             <!-- Note: brms-bpmsuite-platfrom-bom is not used because it brings different versions of Arquillian, Maven
                  and other dependencies, which results in failures during ARQ test execution. -->
