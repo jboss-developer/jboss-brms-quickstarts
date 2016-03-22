@@ -69,7 +69,7 @@ public class ApprovalProcessTest extends JbpmJUnitBaseTestCase {
     }
 
     @Test
-    public void testProcessHighAmmountApproved() {
+    public void testProcessHighAmountApproved() {
         createRuntimeManager(Strategy.PROCESS_INSTANCE, "manager", "approval.bpmn2");
         RuntimeEngine runtime = getRuntimeEngine(ProcessInstanceIdContext.get());
 
@@ -117,7 +117,7 @@ public class ApprovalProcessTest extends JbpmJUnitBaseTestCase {
     }
 
     @Test
-    public void testProcessHighAmmountDenied() {
+    public void testProcessHighAmountDenied() {
         createRuntimeManager(Strategy.PROCESS_INSTANCE, "manager", "approval.bpmn2");
         RuntimeEngine runtime = getRuntimeEngine(ProcessInstanceIdContext.get());
 
