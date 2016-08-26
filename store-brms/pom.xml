@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>brms-store-brms</artifactId>
-    <version>6.3.0-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
 
     <name>JBoss BRMS Quickstart: store-brms</name>
     <licenses>
@@ -32,7 +32,7 @@
         </license>
     </licenses>
     <properties>
-      <version.org.jboss.bom.brms>6.3.0-SNAPSHOT</version.org.jboss.bom.brms>
+      <version.org.jboss.bom.brms>6.4.0-SNAPSHOT</version.org.jboss.bom.brms>
       <maven.test.skip>true</maven.test.skip>
     </properties>
 

@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.brms</groupId>
     <artifactId>jboss-brms-bpmsuite-quickstarts-dist</artifactId>
-    <version>6.3.0-SNAPSHOT</version>
+    <version>6.4.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss BRMS/BPM Suite Quickstarts :: Distribution</name>
     <url>http://www.jboss.org/jdf/quickstarts/get-started/</url>
