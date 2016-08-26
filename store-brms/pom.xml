@@ -113,11 +113,19 @@
     </profiles>
 
     <repositories>
-        <!-- Maven repository with productized JBoss artifacts -->
         <repository>
-            <id>redhat-product-repo</id>
-            <name>Red Hat Product Repository</name>
+            <id>jboss-enterprise-repository-group</id>
+            <name>Jboss Enterprise Maven Repository</name>
             <url>https://maven.repository.redhat.com/ga</url>
+            <layout>default</layout>
+            <releases>
+             <enabled>true</enabled>
+             <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+             <enabled>true</enabled>
+             <updatePolicy>daily</updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
 </project>
