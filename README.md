@@ -12,13 +12,13 @@ Both BRMS and BPM Suite use a centralized repository where all resources are sto
 
 The root folder of each individual quickstart contains a README file with specific details on how to configure the environment and how build and run the example. In some most cases you need to configure either BRMS or BPM and import the BRMS repository.
 
-* [Configure EAP] (#configure-eap): Download and configure Red Hat JBoss EAP.
+* [Download and configure EAP](#download-and-configure-eap): Download and configure Red Hat JBoss EAP.
 
 * [Configure BRMS](#configure-brms): Download and configure Red Hat JBoss BRMS.
 
 * [Configure BPM Suite](#configure-bpm-suite): Download and configure Red Hat JBoss BPM Suite.
 
-* [Start the JBoss BRMS or BPM Suite Server](#start-the-jboss-eap-server): Start the JBoss BRMS or BPM Suite Server.
+* [Start the JBoss BRMS or BPM Suite Server](#start-the-jboss-brms-or-bpm-suite-server): Start the JBoss BRMS or BPM Suite Server.
 
 * [Import the BRMS Repository](#import-the-brms-repository): Import the BRMS repository containing the rules and resources used by the quickstarts.
 
